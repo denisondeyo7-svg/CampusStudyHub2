@@ -11,7 +11,7 @@ function LandingPage (){
 
 
     const AboutContents= [
-        {number:"1" ,small:"Hear from us." ,h1:"About Us",Content:"At Campus Study Hub, we ensure that you never miss an important deadline. Stay informed with the latest campus news and updates, access your academic timetables, and find revision PDFs and study notes to support your learning journey. We're delighted to have you here.",lowerContent:"Welcome to Campus Study Hub — your partner in academic success!"},
+        {number:"1" ,small:"Hear from us" ,h1:"About Us",Content:"At Campus Study Hub, we ensure that you never miss an important deadline. Stay informed with the latest campus news and updates, access your academic timetables, and find revision PDFs and study notes to support your learning journey. We're delighted to have you here.",lowerContent:"Welcome to Campus Study Hub — your partner in academic success!"},
     ]
     return(
 
@@ -68,8 +68,8 @@ function LandingPage (){
 
                         {AboutContents.map((AboutContent)=>(
                             <div className="about-content" key={AboutContent.number}>
-                                <small>{AboutContent.small}</small>
-                                <h1>{AboutContent.h1}</h1>
+                                <small>{AboutContent.small} <i className="fas fa-graduation-cap"></i></small>
+                                <h1>{AboutContent.h1}   <i className="fas fa-graduation-cap"></i></h1>
                                 <p>{AboutContent.Content}</p>
                                 <h2>{AboutContent.lowerContent}</h2>
                             </div>
