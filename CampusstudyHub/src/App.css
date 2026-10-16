@@ -24,7 +24,7 @@ body{
   padding: 10px;
   background: transparent;
   color: #0f0b0b;
-  border: 1px solid #222;
+  box-shadow: 1px 0 5px #222222bd;
   margin: 12px;
   height: 3rem;
   width: 3rem;
@@ -33,7 +33,7 @@ body{
   align-self: flex-end;
   justify-content: center;
   font-size: 22px;
-  background: rgba(83, 248, 248, 0.945);
+  background: #fff;
   border-radius: 5px;
 
 
@@ -223,10 +223,10 @@ header{
 
 .whatsapp{
   position: fixed;
-  right: 42px;
+  right: 32px;
   bottom: 55px;
-  height: 3rem;
-  width: 3rem;
+  height: 3.8rem;
+  width: 3.8rem;
   background: rgb(2, 107, 14);
   display: flex;
   align-items: center;
@@ -235,6 +235,124 @@ header{
 }
 
 .whatsapp i{
-  font-size: 30px;
+  font-size: 40px;
   color: #fff;
+}
+
+.about{
+  position: relative;
+  top: 4rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 22px;
+  width: 100%;
+  height: auto;
+  background: whitesmoke;
+}
+
+.about h1{
+  color: goldenrod;
+  line-height: 100%;
+}
+.about-wrapper{
+  display: flex;
+  align-self: center;
+  gap: 22px;
+  max-width: 70%;
+  width: 100%;
+  height: auto;
+  
+}
+
+.about-content-card{
+  display: flex;
+  gap: 22px;
+  width: 100%;
+}
+.about-image { 
+  position: relative; 
+  height: 500px; 
+  width: 500px; 
+  border-radius: 10px; 
+  overflow: hidden; 
+} 
+
+.images { 
+  height: 100%; 
+  width: 300%; 
+  display: flex; 
+  animation: slide 12s cubic-bezier(0.25, 1, 0.5, 1) infinite; 
+} 
+
+.about-image img { 
+  height: 100%; 
+  width: 33.333%;
+  object-fit: cover; 
+} 
+
+
+@keyframes slide { 
+  0%, 25% { 
+    transform: translateX(0%); 
+  } 
+  33%, 58% { 
+    transform: translateX(-33.333%); 
+  } 
+  66%, 91% { 
+    transform: translateX(-66.666%); 
+  } 
+  100% { 
+    transform: translateX(0%); 
+  } 
+}
+
+.about-content{
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  width: 500px;
+}
+.about-content small{
+  color: #333;
+  letter-spacing: 1px;
+  padding: 10px;
+  background: goldenrod;
+  border-radius: 7px;
+  
+}
+.about-content h1{
+  -webkit-text-stroke: 1px #000;
+  color: goldenrod;
+  letter-spacing: 1px;
+}
+
+.about-content h2{
+  color:  #000;
+  background: rgba(218, 165, 32, 0.425);
+  letter-spacing: 1px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid goldenrod;
+}
+
+
+
+
+
+@media screen and (max-width:768px){
+  .about-content-card{
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    
+  }
+
+  .about-image{
+    width: 420px;
+  }
+
+  .about-content{
+    width: 420px;
+  }
 }
