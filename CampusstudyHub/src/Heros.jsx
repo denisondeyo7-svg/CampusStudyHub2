@@ -13,6 +13,13 @@ function LandingPage (){
     const AboutContents= [
         {number:"1" ,small:"Hear from us" ,h1:"About Us",Content:"At Campus Study Hub, we ensure that you never miss an important deadline. Stay informed with the latest campus news and updates, access your academic timetables, and find revision PDFs and study notes to support your learning journey. We're delighted to have you here.",lowerContent:"Welcome to Campus Study Hub — your partner in academic success!"},
     ]
+
+    const testimonials = [
+        {number:"1",iopen:"fas fa-quote-left",content:"At Campus Study Hub, we ensure that you never miss an important deadline" ,name:"Joh Doe" ,profession:"Profession goes here",iclose:"fas fa-quote-right"},
+        {number:"2",iopen:"fas fa-quote-left",content:"At Campus Study Hub, we ensure that you never miss an important deadline" ,name:"Joh Doe" ,profession:"Profession goes here",iclose:"fas fa-quote-right"},
+        {number:"3",iopen:"fas fa-quote-left",content:"At Campus Study Hub, we ensure that you never miss an important deadline" ,name:"Joh Doe" ,profession:"Profession goes here",iclose:"fas fa-quote-right"},
+        
+    ]
     return(
 
         <section className="landingpage">
@@ -54,7 +61,7 @@ function LandingPage (){
             </div>
 
             <div className="about">
-                <h1>Campus Study Hub</h1>
+                <h1 className="abouth">Campus Study Hub</h1>
                     <br />
                 <div className="about-wrapper">
                     <div className="about-content-card">
@@ -65,7 +72,7 @@ function LandingPage (){
                                 <img src={image3} alt="About image" />
                             </div>
                         </div>
-
+<br />
                         {AboutContents.map((AboutContent)=>(
                             <div className="about-content" key={AboutContent.number}>
                                 <small>{AboutContent.small} <i className="fas fa-graduation-cap"></i></small>
@@ -76,6 +83,26 @@ function LandingPage (){
                         ))}
                     </div>
                 </div>
+            </div>
+<br />
+            <div className="testimonials">
+                <h1>What people say</h1>
+
+                <div className="testimonials-container">
+                    <p>Hear from people</p>
+                    <div className="testimonial-card-container">
+                        {testimonials.map((testimonial)=>(
+                        <div className="testimonial-card"key={testimonial.number}>
+                            <i className={testimonial.iopen}></i>
+                            <p>{testimonial.content}</p>
+                            <i className={testimonial.iclose}></i>
+                            <h2>{testimonial.name} <br /><small className="profession">{testimonial.profession}</small></h2>
+                            
+                        </div>
+                    ))}
+                    </div>
+                </div>
+
             </div>
             <div className="whatsapp">
                 <a href="https://wa.me/254726534460" target="_blank" rel="noopener noreferrer"><i className="fab fa-whatsapp"></i></a>
