@@ -43,10 +43,11 @@ body{
 header{
   position: relative;
   top: 2rem;
-  max-width: 70%;
+  max-width: 80%;
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   align-self: center;
   gap: 22px;
   height: 5rem;
@@ -126,6 +127,9 @@ header{
 
 
 
+
+
+
 .landingpage{
   background: whitesmoke;
   display: flex;
@@ -143,22 +147,27 @@ header{
   display: flex;
   gap: 22px;
   flex-direction: column;
-  max-width: 70%;
+  max-width: 75%;
   width: 100%;
   height: auto;
-  padding: 10px;
+  padding-left: 2rem;
 }
 
 .cards-container{
+
   width: 100%;
   display: flex;
+  align-self: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 22px;
   align-items: center;
   height: auto;
+  
+
 }
 .welcome-card{
+  width: auto;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -179,7 +188,8 @@ header{
   background: #fff;
   border-left: 5px solid #007bff;
   border-radius: 7px;
-  width: 18rem;
+  width: 20rem;
+
 }
 
 .cards-container .card:nth-child(1){

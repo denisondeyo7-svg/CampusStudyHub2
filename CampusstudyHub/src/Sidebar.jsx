@@ -2,7 +2,7 @@ import { useState } from "react"
 
 function Navbar(){
 
-    const[isCollapsed ,setisCollpsed] =useState(false);
+    const[isCollapsed ,setisCollpsed] =useState(true);
 
     return(
         <div className={`sidebar ${isCollapsed ? "collapsed" : ""}`}>
