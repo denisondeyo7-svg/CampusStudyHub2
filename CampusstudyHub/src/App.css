@@ -12,6 +12,7 @@ body{
   position: fixed;
   z-index: 1000;
   height: 100vh;
+  left: 0;
   width:  auto ;
   background: goldenrod;
   display: flex;
@@ -348,11 +349,19 @@ header{
     
   }
 
+  .about-wrapper{
+    width: auto;
+  }
   .about-image{
-    width: 420px;
+    width: auto;
+    height: 300px;
+  }
+
+  .images{
+    height: 100%;
   }
 
   .about-content{
-    width: 420px;
+    width: auto;
   }
 }
