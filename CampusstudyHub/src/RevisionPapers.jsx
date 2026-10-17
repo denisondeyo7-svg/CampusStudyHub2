@@ -2,7 +2,9 @@
 function Revisionpapers(){
 
     return(
-        <h1>All Revision papers content goes here</h1>
+        <div className="pdfs">
+            <h1>Revision Papers</h1>
+        </div>
     )
 }
 

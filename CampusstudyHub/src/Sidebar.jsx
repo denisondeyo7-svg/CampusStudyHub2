@@ -16,44 +16,44 @@ function Navbar(){
                 <nav>
                     <small className="academics">
                     <div className="navlink">
-                        <i className="fas fa-home"></i><Link to="/Dashboard">Dashboard</Link>
+                        <i className="fas fa-home"></i><Link to="/Dashboard" onClick={()=>setisCollpsed(!isCollapsed)}>Dashboard</Link>
                     </div>
 
                     <div className="navlink">
-                        <i className="fa-regular fa-calendar"></i><Link to="/Timetable">      Timetable</Link>
+                        <i className="fas fa-history"></i><Link to="/Timetable" onClick={()=>setisCollpsed(!isCollapsed)}>      Timetable</Link>
                     </div>
 
                     <div className="navlink">
-                        <i className="fas fa-book"></i><Link to="/Notes">      Notes</Link>
+                        <i className="fas fa-book"></i><Link to="/Notes" onClick={()=>setisCollpsed(!isCollapsed)}>      Notes</Link>
                     </div>
 
                     <div className="navlink">
-                        <i className="fa-regular fa-file"></i><Link to="/Assessments">      Assessments</Link>
+                        <i className="fas fa-tasks"></i><Link to="/Assessments" onClick={()=>setisCollpsed(!isCollapsed)}>      Assessments</Link>
                     </div>
 
                     <div className="navlink">
-                        <i className="fas fa-layer-group"></i><Link to="/RevisionPapers">      Revision Papers</Link>
+                        <i className="fas fa-layer-group"></i><Link to="/RevisionPapers" onClick={()=>setisCollpsed(!isCollapsed)}>      Revision Papers</Link>
                     </div>
 
 
                     <div className="navlink">
-                        <i className="fas fa-newspaper"></i><Link to="/News">     News & Events</Link>
+                        <i className="fas fa-newspaper"></i><Link to="/News"    onClick={()=>setisCollpsed(!isCollapsed)}>     News & Events</Link>
                     </div>
 
                     <div className="navlink">
-                        <i className="fas fa-pen"></i><Link to="/Deadlines">       Deadlines</Link>
+                        <i className="fas fa-bell"></i><Link to="/Deadlines"    onClick={()=>setisCollpsed(!isCollapsed)}>       Deadlines</Link>
                     </div>
             </small>
                     <div className="navlink">
-                        <i className="fas fa-globe"></i><Link to="/About">     About Us</Link>
+                        <i className="fas fa-globe-americas"></i><Link to="/About"  onClick={()=>setisCollpsed(!isCollapsed)}>     About Us</Link>
                     </div>
 
                     <div className="navlink">
-                        <i className="fas fa-users"></i><Link to="/Testimonials">     Testimonials</Link>
+                        <i className="fas fa-users"></i><Link to="/Testimonials"    onClick={()=>setisCollpsed(!isCollapsed)}>     Testimonials</Link>
                     </div>
 
                     <div className="navlink">
-                        <i className="fas fa-phone"></i><Link to="/Contact">     Contact Us</Link>
+                        <i className="fas fa-phone"></i><Link to="/Contact" onClick={()=>setisCollpsed(!isCollapsed)}>     Contact Us</Link>
                     </div>
                             
                     

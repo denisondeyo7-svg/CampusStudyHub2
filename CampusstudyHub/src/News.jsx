@@ -2,7 +2,10 @@
 function News(){
 
     return(
-        <h1>All News and Events content goes here</h1>
+       <div className="news">
+        <h1>News & Updates</h1>
+       </div>
+       
     )
 }
 

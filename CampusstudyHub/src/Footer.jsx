@@ -14,9 +14,9 @@ function Footer(){
                     <a href="tel:+254726534460"><i className="fas fa-phone"></i></a>
                 </div>
             </div>
-            <br />
+        
             <div className="mainfooter">
-                <h2>Campus Study Hub</h2>
+                
                 
 
                 <div className="academics">
@@ -57,7 +57,7 @@ function Footer(){
 
             </div><br />
             <div className="subfooter">
-                <small>All rights reserved | Campus Study Hub | Developed By Denis</small>
+                <small>All rights reserved | Campus Study Hub <br /> Developed By Denis</small>
             </div>
         </footer>
     )

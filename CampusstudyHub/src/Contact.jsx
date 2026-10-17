@@ -2,7 +2,9 @@
 function Contact(){
 
     return(
-        <h1>All Contact content goes here</h1>
+        <div className="contact">
+            <h1>Get in touch</h1>
+        </div>
     )
 }
 

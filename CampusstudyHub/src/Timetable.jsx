@@ -2,7 +2,13 @@
 function Timetable(){
 
     return(
-        <h1>The Timetable content goes here</h1>
+        <div className="timetable">
+            <h1>Timetable</h1>
+
+            <div className="timetable-wrapper">
+                <h2>Timetables from db to be displayed here</h2>
+            </div>
+        </div>
     )
 }
 

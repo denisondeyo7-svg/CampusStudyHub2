@@ -11,20 +11,20 @@ function LandingPage (){
 
 
     const AboutContents= [
-        {number:"1" ,small:"Hear from us" ,h1:"About Us",Content:"At Campus Study Hub, we ensure that you never miss an important deadline. Stay informed with the latest campus news and updates, access your academic timetables, and find revision PDFs and study notes to support your learning journey. We're delighted to have you here.",lowerContent:"Welcome to Campus Study Hub — your partner in academic success!"},
+        {number:"1" ,small:"Hear from us" ,h1:"About Us",Content:"At Campus Study Hub, we ensure that you never miss an important deadline. Stay informed with the latest campus news and updates, access your academic timetables, and find revision PDFs and study notes to support your learning journey. We're delighted to have you here.",lowerContent:"Campus Study Hub — your partner in academic success!"},
     ]
 
     const testimonials = [
-        {number:"1",iopen:"fas fa-quote-left",content:"At Campus Study Hub, we ensure that you never miss an important deadline" ,name:"Joh Doe" ,profession:"Profession goes here",iclose:"fas fa-quote-right"},
+        {number:"1",iopen:"fas fa-quote-left",content:"This is good work my boy" ,name:"Joh Doe" ,profession:"Vice Chancellor - Den University",iclose:"fas fa-quote-right"},
         {number:"2",iopen:"fas fa-quote-left",content:"At Campus Study Hub, we ensure that you never miss an important deadline" ,name:"Joh Doe" ,profession:"Profession goes here",iclose:"fas fa-quote-right"},
         {number:"3",iopen:"fas fa-quote-left",content:"At Campus Study Hub, we ensure that you never miss an important deadline" ,name:"Joh Doe" ,profession:"Profession goes here",iclose:"fas fa-quote-right"},
         
     ]
 
     const stats=[
-        {number:"1", limit:"10+" ,name:"Our Members",i:"fas fa-users"},
-        {number:"2", limit:"15+" ,name:"Uploaded Notes",i:"fas fa-graduation-cap"},
-        {number:"3", limit:"17+" ,name:"PDFs Available",i:"fas fa-layer-group"},
+        {number:"1", limit:"10+" ,name:"Members",i:"fas fa-user-graduate"},
+        {number:"2", limit:"15+" ,name:"Notes",i:"fas fa-graduation-cap"},
+        {number:"3", limit:"17+" ,name:"PDFs",i:"fas fa-layer-group"},
         {number:"4", limit:"7+" ,name:"Assessments",i:"fa-regular fa-file"}
     ]
     return(
@@ -95,10 +95,10 @@ function LandingPage (){
 <br />
             <div className="testimonials">
                 <br />
-                <h1>What people say</h1>
+                <h1 className="th1">What people say</h1>
 
                 <div className="testimonials-container">
-                    <p>Hear from people</p>
+                    <p className="hear">Hear from people</p>
                     <div className="testimonial-card-container">
                         {testimonials.map((testimonial)=>(
                         <div className="testimonial-card"key={testimonial.number}>

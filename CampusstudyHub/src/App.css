@@ -18,6 +18,7 @@ body{
   display: flex;
   flex-direction: column;
   overflow-y: auto;
+  
 
 
 }
@@ -94,7 +95,8 @@ header{
 
 .navlink i{
   font-size: 23px;
-  color: #04172c;
+  color: #e2e0e0;
+  -webkit-text-stroke:  1px #000;
 }
 .navlink a{
   text-decoration: none;
@@ -114,8 +116,10 @@ header{
   
 }
 .collapsed .sidebar{
+  
   width: 70px;
   align-items: center;
+  
 
   
 }
@@ -253,11 +257,27 @@ header{
   background: whitesmoke;
 }
 
+
+.th1{
+  color: goldenrod;
+  
+}
 .abouth{
   color: goldenrod;
   line-height: 100%;
-  border-radius: 5px;
   padding: 5px;
+  animation: scrolleffect 12s linear;
+  animation-timeline: scroll();
+  animation-range: entry 0% entry 20%;
+}
+
+@keyframes scrolleffect {
+  from{
+    scale: .2;
+  }
+  to{
+    scale: 1;
+  }
 }
 .about-wrapper{
   display: flex;
@@ -363,6 +383,15 @@ header{
   width: 100%;
   position: relative;
   padding: 20px;
+  padding-left: rem;
+}
+
+.hear{
+  padding: 10px;
+  border-radius: 8px;
+  background: rgba(218, 165, 32, 0.137);
+  border: 1px solid goldenrod;
+  color: #000;
 }
 
 .testimonials-container p{
@@ -379,19 +408,22 @@ header{
   overflow: hidden;
 }
 .testimonial-card{
-  border: 1px solid goldenrod;
+  color: #fff;
   display: flex;
   flex-direction: column;
   gap: 22px;
   padding: 15px;
   border-radius: 8px;
-  background: rgba(218, 165, 32, 0.466);
+  background: rgba(29, 29, 28, 0.466);
   width: 100%;
   flex: 0 0 100%; 
   box-sizing: border-box;
   animation: slideleft 12s linear infinite;
   
 }
+
+
+
 
 @keyframes slideleft {
 
@@ -414,13 +446,15 @@ header{
 }
 
 .testimonial-card i{
-  font-size: 22px;
-  color: #333;
+  font-size: 26px;
+  color: #999;
+  -webkit-text-stroke: 1px #fff;
 
 }
 
 .testimonial-card small{
-  border-bottom: 1px solid #333;
+  color:  #e6e3e3;
+  font-size: 12px;
 }
 
 
@@ -448,7 +482,7 @@ header{
 .stats-card{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  
   gap: 12px;
   padding: 12px;
 
@@ -459,24 +493,148 @@ header{
   display: flex;
   gap: 22px;
   align-items: center;
+
+
 }
 
 .stats .label i{
-  color: rgb(2, 104, 24);
-  font-size: 22px;
+  color: goldenrod;
+  font-size: 26px;
+}
+
+
+.timetable{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  gap: 22px;
+  background: whitesmoke;
+}
+
+.timetable-wrapper{
+  max-width: 70%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+
+.contact,
+.main-testimonial,
+.news,
+.pdfs,
+.deadlines,
+.notes,
+.assessments{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  gap: 22px;
+  background: whitesmoke;
+
+}
+
+
+
+.contact h1,
+.main-testimonial h1,
+.news h1,
+.pdfs h1,
+.deadlines h1,
+.assessments h1,
+.card,
+.timetable h1,
+.notes h1{
+   animation: fade .8s ease;
+}
+
+
+
+.notes-card,
+.welcome-card{
+  animation: slidetoreveal .8s linear;
 }
 
 
 
 
+@keyframes fade{
+  from{
+    transform: translateY(22px);
+    opacity: 0;
+  }
+
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slidetoreveal{
+  from{
+    transform: translateX(22px);
+    
+  }
+
+  to{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.notes-wrapper{
+  max-width: 70%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.notes-card{
+  padding: 10px;
+  background: rgba(218, 165, 32, 0.219);
+  border: 1px solid goldenrod;
+  border-radius: 12px;
+  
+}
+
+.buttons{
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-left: 22px;
+}
+
+.buttons a:nth-child(1){
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 8px;
+  background: #1a2e38;
+  color: #f3f1f1;
+}
+
+.buttons a:last-child{
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 8px;
+  background: rgb(2, 107, 14);
+  color: #f3f1f1;
+}
+
 footer{
-  background: #000;
+  background: #1a2e38 !important;
   width: 100%;
   position: relative;
   top: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 22px;
 }
 
 footer .socials{
@@ -494,13 +652,16 @@ footer .socials small{
 
 footer .socials-links{
   display: flex;
-  gap: 22px;
+  gap: 12px;
   align-items: center;
 }
 
 footer .socials-links i{
   font-size: 25px;
-  color: #dad9d9;
+  color: #000;
+  padding: 2px;
+  background: #c2c0c0;
+  border-radius: 5px;
 }
 
 
@@ -508,7 +669,6 @@ footer .socials-links i{
   max-width: 70%;
   width: 100%;
   display: flex;
-
   justify-content: center;
   gap: 62px;
 }
@@ -521,7 +681,7 @@ footer .socials-links i{
 .mainfooter .academics{
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
 }
 
 .mainfooter .academics nav{
@@ -531,7 +691,7 @@ footer .socials-links i{
 }
 
 .mainfooter .academics nav a{
-  color: #dad9d9;
+  color: #c2c0c0;
   text-decoration: none;
   transition: .3s ease;
 }
@@ -545,13 +705,14 @@ footer .socials-links i{
   align-items: center;
   justify-content: center;
   align-self: center;
-  width: 90%;
+  width: 50%;
   padding: 22px;
   border-top: 1px solid #ece9e98e;
 }
 
 .subfooter small{
-  color: #dad9d9;
+  text-align: center;
+  color: #c2c0c0;
 }
 
 
@@ -605,8 +766,15 @@ footer .socials-links i{
   .about-content{
     width: auto;
   }
+
+  .testimonials-container{
+    max-width: 80%;
+    width: 100%;
+    padding: 20px;
+    padding-left: 5rem;
+  }
   .stats-container{
-   
+    padding-left: 2rem;
     display: grid;
     justify-items: center;
     grid-template-columns: repeat(2 ,1fr);
@@ -630,6 +798,11 @@ footer .socials-links i{
     justify-items: center;
     grid-template-columns: repeat(2 ,1fr);
     
+  }
+  .notes-wrapper{
+    max-width: 80%;
+    width: 100%;
+    padding-left: 4rem;
   }
 
 }

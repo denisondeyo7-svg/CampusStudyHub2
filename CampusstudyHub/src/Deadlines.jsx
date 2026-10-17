@@ -2,7 +2,9 @@
 function Deadlines(){
 
     return(
-        <h1>All Deadlines content goes here</h1>
+        <div className="deadlines">
+            <h1>Deadlines</h1>
+        </div>
     )
 }
 
