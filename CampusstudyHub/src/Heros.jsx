@@ -20,6 +20,13 @@ function LandingPage (){
         {number:"3",iopen:"fas fa-quote-left",content:"At Campus Study Hub, we ensure that you never miss an important deadline" ,name:"Joh Doe" ,profession:"Profession goes here",iclose:"fas fa-quote-right"},
         
     ]
+
+    const stats=[
+        {number:"1", limit:"10+" ,name:"Our Members",i:"fas fa-users"},
+        {number:"2", limit:"15+" ,name:"Uploaded Notes",i:"fas fa-graduation-cap"},
+        {number:"3", limit:"17+" ,name:"PDFs Available",i:"fas fa-layer-group"},
+        {number:"4", limit:"7+" ,name:"Assessments",i:"fa-regular fa-file"}
+    ]
     return(
 
         <section className="landingpage">
@@ -61,6 +68,7 @@ function LandingPage (){
             </div>
 
             <div className="about">
+                <br />
                 <h1 className="abouth">Campus Study Hub</h1>
                     <br />
                 <div className="about-wrapper">
@@ -86,6 +94,7 @@ function LandingPage (){
             </div>
 <br />
             <div className="testimonials">
+                <br />
                 <h1>What people say</h1>
 
                 <div className="testimonials-container">
@@ -104,9 +113,32 @@ function LandingPage (){
                 </div>
 
             </div>
+
+            <br />
+            <div className="stats">
+                <h1>At glance</h1>
+<br />
+                <div className="stats-container">
+                    {stats.map((stat)=>(
+                        <div className="stats-card"key={stat.number}>
+                            <h2>{stat.limit}</h2>
+                            <div className="label">
+                                <small>{stat.name}</small>
+                                <i className={stat.i}></i>
+                            </div>
+
+                        </div>
+                    ))}
+
+                    
+
+                </div>
+            </div>
+
             <div className="whatsapp">
                 <a href="https://wa.me/254726534460" target="_blank" rel="noopener noreferrer"><i className="fab fa-whatsapp"></i></a>
             </div>
+            <br /><br />
         </section>
     )
 }

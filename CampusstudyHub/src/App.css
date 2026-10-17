@@ -25,7 +25,7 @@ body{
   padding: 10px;
   background: transparent;
   color: #0f0b0b;
-  box-shadow: 1px 0 5px #222222bd;
+  border: 1px solid #222222bd;
   margin: 12px;
   height: 3rem;
   width: 3rem;
@@ -233,6 +233,7 @@ header{
   align-items: center;
   justify-content: center;
   border-radius: 6px;
+  z-index: 100;
 }
 
 .whatsapp i{
@@ -242,7 +243,7 @@ header{
 
 .about{
   position: relative;
-  top: 4rem;
+  top: 2rem;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -349,6 +350,7 @@ header{
   position: relative;
   top: 4rem;
   background: rgb(233, 230, 230);
+  height: auto;
 
 }
 
@@ -360,6 +362,7 @@ header{
   max-width: 60%;
   width: 100%;
   position: relative;
+  padding: 20px;
 }
 
 .testimonials-container p{
@@ -372,6 +375,7 @@ header{
 .testimonial-card-container{
   display: flex;
   width: 100%;
+  border-radius: 8px;
   overflow: hidden;
 }
 .testimonial-card{
@@ -403,9 +407,7 @@ header{
     transform: translateX(-200%);
   }
 
-  99.99% {
-    transform: translateX(-300%);
-  }
+  
    100% {
     transform: translateX(0%);
   }
@@ -420,12 +422,165 @@ header{
 .testimonial-card small{
   border-bottom: 1px solid #333;
 }
+
+
+.stats{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  height: auto;
+  position: relative;
+  top: 3rem;
+}
+
+.stats-container{
+  position: relative;
+  max-width: 70%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 6px;
+}
+
+.stats-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+
+  
+}
+
+.stats-card .label{
+  display: flex;
+  gap: 22px;
+  align-items: center;
+}
+
+.stats .label i{
+  color: rgb(2, 104, 24);
+  font-size: 22px;
+}
+
+
+
+
 footer{
   background: #000;
   width: 100%;
   position: relative;
+  top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+footer .socials{
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  align-items: center;
+  padding: 22px;
+
+}
+
+footer .socials small{
+  color: #fff;
+}
+
+footer .socials-links{
+  display: flex;
+  gap: 22px;
+  align-items: center;
+}
+
+footer .socials-links i{
+  font-size: 25px;
+  color: #dad9d9;
+}
+
+
+.mainfooter{
+  max-width: 70%;
+  width: 100%;
+  display: flex;
+
+  justify-content: center;
+  gap: 62px;
+}
+
+.mainfooter h2{
+  color: goldenrod;
+}
+
+
+.mainfooter .academics{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mainfooter .academics nav{
+  display: flex;
+  flex-direction: column;
+  gap: 5px
+}
+
+.mainfooter .academics nav a{
+  color: #dad9d9;
+  text-decoration: none;
+  transition: .3s ease;
+}
+
+.mainfooter .academics nav a:hover{
+  color: goldenrod;
+}
+
+.subfooter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  width: 90%;
+  padding: 22px;
+  border-top: 1px solid #ece9e98e;
+}
+
+.subfooter small{
+  color: #dad9d9;
+}
+
+
+
+
+
+@media screen and (max-width:480px){
+  .stats-container{
+    grid-template-columns: repeat(1 ,1fr) !important;
+   
+  
+    
+  }
+  .stats-card{
+    width: 90%;
+    align-self: center;
+    padding: 22px;
+    border-right: none;
+    border-bottom: 2px solid rgba(218, 165, 32, 0.678);
+    
+  }
+  .mainfooter{
+    padding: 10px !important;
+    gap: 25px !important;
+    display: grid !important;
+    
+    grid-template-columns: repeat(1 ,1fr) !important;
+  }
+}
 
 @media screen and (max-width:768px){
   .about-content-card{
@@ -450,4 +605,31 @@ footer{
   .about-content{
     width: auto;
   }
+  .stats-container{
+   
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(2 ,1fr);
+  
+    
+  }
+  .stats-card{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    padding: 22px;
+    border-right: none;
+    border-bottom: 2px solid rgba(218, 165, 32, 0.678);
+    
+  }
+
+  .mainfooter{
+    padding: 10px;
+    gap: 25px;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(2 ,1fr);
+    
+  }
+
 }
