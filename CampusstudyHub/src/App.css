@@ -229,7 +229,7 @@ header{
 .whatsapp{
   position: fixed;
   right: 32px;
-  bottom: 55px;
+  bottom: 50px;
   height: 3.8rem;
   width: 3.8rem;
   background: rgb(2, 107, 14);
@@ -244,7 +244,168 @@ header{
   font-size: 40px;
   color: #fff;
 }
+.chatbox{
+  
+  position: fixed;
+  bottom: 12.5rem;
+  height: 500px;
+  background: #fff;
+  box-shadow:  1px 0 5px;
+  border-radius: 10px;
+  width: 70%;
+  z-index: 900;
+  right: 38px;
+  height: 400px;
+  overflow: hidden;
+}
 
+.boxheader{
+  width: 100%;
+  height: 2.4rem;
+  background: goldenrod;
+}
+
+.boxheader button{
+  margin: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: right;
+  background: transparent;
+  border: none;
+  padding: 2px;
+}
+
+.boxheader button i{
+  font-size: 22px;
+  color: #fff;
+}
+
+.online-chart{
+  cursor: pointer;
+  position: fixed;
+  right: 32px;
+  bottom: 135px;
+  height: 3.8rem;
+  width: 3.8rem;
+  box-shadow:  0 0 6px;
+  background: goldenrod;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius:50%;
+  z-index: 100;
+}
+
+.online-chart i{
+  font-size: 26px;
+  color: #292828;
+
+}
+
+.box-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  justify-self: center;
+  width: 98%;
+  position: relative;
+
+}
+.box-content form{
+  background: transparent;
+  position: absolute;
+  top: 432px;
+  z-index: 1000;
+  width: 100%;
+  background: goldenrod;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+
+.box-content form .input{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 90%;
+}
+
+.box-content form #message{
+  outline: none;
+  border-radius: 30px;
+  padding: 10px;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #999;
+  color: #000;
+}
+
+.box-content form #message:focus{
+  border: 1px solid goldenrod;
+}
+
+.box-content form button{
+  border-radius: 50%;
+  height: 2.4rem;
+  width: 2.4rem;
+  padding: 10px;
+ border: none;
+  background: #007bff;
+  box-shadow: 2px 0 3px #333;
+}
+
+.message-container{
+  width: 93%;
+  position: relative;
+  top: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  height: 50px;
+  overflow-y: scroll;
+  padding: 10px;
+}
+
+.message-card{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #fff;
+  box-shadow: 2px 0 5px #999;
+  border-radius: 10px;
+}
+
+.message-top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.deletemessage:hover{
+  color: #f00f;
+}
+.bodydetails{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.dp{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 550;
+  background: #1d1c1c79;
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  padding: 5px;
+}
 .about{
   position: relative;
   top: 2rem;
@@ -257,6 +418,11 @@ header{
   background: whitesmoke;
 }
 
+.card{
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
 
 .th1{
   color: goldenrod;
@@ -279,6 +445,18 @@ header{
     scale: 1;
   }
 }
+.about2{
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
+  gap: 22px;
+  max-width: 70%;
+  width: 100%;
+  height: auto;
+  padding-left: 2rem;
+}
+
+
 .about-wrapper{
   display: flex;
   align-self: center;
@@ -332,6 +510,13 @@ header{
   } 
 }
 
+
+
+.about-content .fa-quote-left{
+  font-size: 28px;
+  color: #fff;
+  -webkit-text-stroke: 1px #000;
+}
 .about-content{
   display: flex;
   flex-direction: column;
@@ -360,6 +545,21 @@ header{
   border-radius: 5px;
   border: 1px solid goldenrod;
 }
+
+#morebtn{
+  padding: 10px;
+  background: #1a2e38;
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  width: auto;
+}
+.card{
+  background: rgba(218, 165, 32, 0.425);
+  border-radius: 8px;
+  padding: 10px;
+}
+
 
 .testimonials{
   display: flex;
@@ -540,7 +740,7 @@ header{
 }
 
 
-
+.about h1,
 .contact h1,
 .main-testimonial h1,
 .news h1,
@@ -789,6 +989,14 @@ footer .socials-links i{
     border-right: none;
     border-bottom: 2px solid rgba(218, 165, 32, 0.678);
     
+  }
+
+  .chatbox{
+    height: 55vh;
+  }
+
+  .message-container{
+    height: 400px;
   }
 
   .mainfooter{
