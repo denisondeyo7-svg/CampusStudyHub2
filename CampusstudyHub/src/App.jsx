@@ -11,20 +11,34 @@ import Deadlines from './Deadlines.jsx'
 import About from './About.jsx'
 import Testimonial from './Testimonials.jsx'
 import Contact from './Contact.jsx'
+import IndexPage from './indexPage.jsx'
 
 
 import './App.css'
 
+function App(){
+  return(
+    <>
+      <IndexPage/>
+    </>
+  )
+}
 
 
 function navs() {
   return (
     <BrowserRouter>
-    <Navbar/>
+    
       <Routes>
-        <Route path="/Dashboard"element={
+        <Route path="/"element={
           <>
             
+            <App/>
+            </>
+        }/>
+        <Route path="/Dashboard"element={
+          <>
+            <Navbar/>
             <LandingPage/>
       
             </>
@@ -32,7 +46,7 @@ function navs() {
 
         <Route path="/Timetable"element={
           <>
-          
+            <Navbar/>
             <Timetable/>
             
             </>
@@ -40,7 +54,7 @@ function navs() {
 
         <Route path="/Notes"element={
           <>
-            
+            <Navbar/>
             <Notes/>
             
             </>
@@ -48,7 +62,7 @@ function navs() {
 
         <Route path="/Assessments"element={
           <>
-            
+            <Navbar/>
             <Assessments/>
             
             </>
@@ -56,7 +70,7 @@ function navs() {
 
         <Route path="/RevisionPapers"element={
           <>
-            
+            <Navbar/>
             <Revisionpapers/>
             
             </>
@@ -64,7 +78,7 @@ function navs() {
 
         <Route path="/News"element={
           <>
-            
+            <Navbar/>
             <News/>
             
             </>
@@ -72,7 +86,7 @@ function navs() {
 
         <Route path="/Deadlines"element={
           <>
-            
+            <Navbar/>
             <Deadlines/>
             
             </>
@@ -80,7 +94,7 @@ function navs() {
 
         <Route path="/About"element={
           <>
-           
+           <Navbar/>
             <About/>
             
             </>
@@ -88,7 +102,7 @@ function navs() {
 
         <Route path="/Testimonials"element={
           <>
-           
+           <Navbar/>
             <Testimonial/>
             
             </>
@@ -96,7 +110,7 @@ function navs() {
 
         <Route path="/Contact"element={
           <>
-            
+            <Navbar/>
             <Contact/>
             
             </>

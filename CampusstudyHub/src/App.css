@@ -8,6 +8,9 @@ body{
   background: whitesmoke;
 }
 
+html{
+  scroll-behavior: smooth;
+}
 .sidebar{
   position: fixed;
   z-index: 1000;
@@ -128,10 +131,281 @@ header{
   display: none;
 }
 
+.home{
+  background: #fff;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.my-index-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: goldenrod;
+  
+
+}
+
+.my-index-header-logo{
+  margin-left: 22px;
+  display: flex;
+  width: 7rem;
+  height: 7rem;
+  overflow: hidden;
+}
+
+.my-index-header-logo img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.links{
+  display: flex;
+  gap: 22px;
+}
+
+.links a{
+  font-size: 18px;
+  text-decoration: none;
+  color: #fff;
+  transition: .3s ease;
+  padding: 10px;
+  border: 1px solid transparent;
+}
+
+.links a:hover{
+  color: goldenrod;
+  border:  1px solid goldenrod;
+  border-radius: 8px;
+  
+}
+
+.call2actions{
+  position: relative;
+  margin-right: 22px;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+#loginbtn{
+  padding: 14px;
+  border: none;
+  background: #fff;
+  color: #000;
+  border-radius: 10px;
+  font-size: 17px;
+  width: 5rem;
+
+}
+
+#regbtn{
+  padding: 14px;
+  box-shadow:  0 0 10px #333;
+  border: none;
+  background: #007bff;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 17px;
+}
+
+.menu{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  height: auto;
+  width: 100%;
+  bottom: 0;
+  background: #fff;
+  z-index: -800;
+ 
+
+}
+
+.menu a{
+  padding: 14px 20px;
+  text-decoration: none;
+  color: #333;
+  transition: .4s ease;
+  font-size: 20px;
+}
+
+.menu a:hover{
+  color: goldenrod;
+}
+
+.menu .call2actions{
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-self: center;
+  width: 90%;
+  margin: 12px;
+  padding: 10px;
+}
+#myloginbtn{
+  padding: 14px;
+  border: 1px solid #999;
+  background: #ffff;
+  color: #333;
+  border-radius: 5px;
+  font-size: 17px;
+  width: 100%;
+  transition: .3s ease;
+}
+
+#myloginbtn:hover{
+  background: #007bff;
+  color: #fff;
+  border: 1px solid #007bff;
+}
+#myregbtn{
+  padding: 14px;
+  border: none;
+  background: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 17px;
+  width: 100%;
+}
+
+#myregbtn:hover{
+  background: #fff;
+  color: #333;
+  border: 1px solid #999;
+}
+
+.heroes{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.heros-image{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #1a2e38;
+}
+
+.heros-image img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+ 
+  
+}
+
+.texts{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  margin: 12px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  text-align: center;
 
 
+}
 
+.headline{
+  animation: 1s fade ease;
+  animation-delay: .3s;
+}
 
+@keyframes fade{
+  from{
+    opacity: 0.6;
+    transform: translateY(5px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.texts h1{
+  line-height: 110%;
+}
+.den{
+  color: goldenrod;
+}
+
+.dams{
+  color: #007bff;
+}
+.texts h1{
+  color: #fff;
+}
+
+.small{
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.theme{
+  text-align: center;
+  color: #fff;
+  animation: 1s fade ease;
+  animation-delay: 2.5s;
+}
+
+.btn{
+  display: flex;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  animation: 1s fade ease;
+  animation-delay: 1.3s;
+}
+
+#explore{
+  padding: 17px;
+  box-shadow: 1px 0 5px #333;
+  border-radius: 7px;
+  background: #ffff;
+  color: #000;
+  border: none;
+  width: 16rem;
+  font-size: 16px;
+  transition: .3s ease;
+}
+
+#explore:hover{
+  background: goldenrod;
+  color: #fff;
+}
+
+.Menubtn{
+  position: relative;
+  display: none;
+  padding: 12px;
+  font-size: 22px;
+  margin-right: 22px;
+  background: transparent;
+  border: 1px solid #fff;
+  transition: .3s ease;
+  width: 4rem;
+}
+
+.Menubtn:hover{
+  background: #fff;
+  color: goldenrod;
+}
 
 
 
@@ -739,7 +1013,104 @@ header{
 
 }
 
+.contact-wrapper{
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.contact-card{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+
+}
+
+.card1{
+  width: 500px;
+}
+
+.card1 .socials{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.card1 .socials i{
+ font-size: 33px;
+ color: #333;
+ transition: .3s ease;
+}
+
+.card1 .socials i:hover{
+ color: goldenrod;
+}
+.card1 h1{
+  line-height: 110%;
+}
+
+.card2{
+  width: 500px;
+}
+
+.card2 form{
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 12px;
+  flex-grow: 1;
+
+}
+
+.card2 form .input{
+  position: relative;
+  width: 100%;
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+}
+
+.card2 form label{
+  position: absolute;
+  margin-left: 12px;
+  top: 10px;
+  color: #555;
+}
+
+.card2 form #message{
+  height: 3rem;
+}
+.card2 form #message,
+.card2 form input{
+  padding: 12px;
+  color: #000;
+  border: 1px solid #999;
+  background: transparent;
+  border-radius: 10px;
+  width: 100%;
+  outline: none;
+}
+
+.input #message:focus,
+.input input:focus{
+  border:1px solid  #007bff;
+  
+}
+.card2 form .input #message:focus + label,
+.card2 form .input input:focus + label ,
+.card2 form .input input:valid + label
+{
+  top: -10px;
+  background: #fff;
+  
+  
+}
 .about h1,
 .contact h1,
 .main-testimonial h1,
@@ -1012,5 +1383,23 @@ footer .socials-links i{
     width: 100%;
     padding-left: 4rem;
   }
+
+}
+
+
+@media screen and (max-width:900px){
+    .links{
+    display: none;
+  }
+
+  #regbtn,
+  #loginbtn{
+    display: none;
+  }
+  
+  .Menubtn{
+    display: block;
+  }
+  
 
 }
