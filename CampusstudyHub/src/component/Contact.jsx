@@ -2,22 +2,32 @@
 function Contact(){
 
     return(
-        <div className="contact">
+        <div className="index-contact">
+            <br /><br /><br />
             
+            <h1>Need to <span className="dams">talk ?</span></h1>
 
             <div className="contact-wrapper">
-                <h1><span className="small">Let's talk</span> <br />Get in <span className="dams">touch</span></h1>
 
                 <div className="contact-card">
                     <div className="card1">
-                        <h1>You can reach us through the following channels</h1>
+                        <h1>You can reach us through the following channels :</h1>
 
                         <div className="socials">
                             <i className="fab fa-whatsapp"></i>
                             <i className="fab fa-facebook"></i>
                             <i className="fab fa-x-twitter"></i>
                             <i className="fab fa-linkedin"></i>
-                            <i className="fas fa-phone"></i>
+                            
+                        </div>
+
+                        <br />
+
+                        <div className="reach">
+                            <small>Email: <a href="mailto:denisondeyo7@gmail.com">denisondeyo7@gmail.com</a></small>
+                            <small>Phone: <a href="tel:+254726534460">0726534460</a> </small>
+                            <small>Location: KakamegaTown-Kenya </small>
+                            
                         </div>
                     </div>
 
@@ -45,11 +55,11 @@ function Contact(){
                                 <label htmlFor="message">Message </label>
                             </div>
 
-                            <div className="input">
-                                <input type="checkbox" />Agree to terms and conditions
-                            </div>
+                            
 
-                            <button>Send Message</button>
+                            <div className="input">
+                                <button id="sendmessage">Send Message</button>
+                            </div>
                         </form>
                     </div>
                 </div>

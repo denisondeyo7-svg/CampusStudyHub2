@@ -7,7 +7,7 @@ import Contact from './component/Contact'
 function IndexPage(){
  
     return(
-        <main className="home">
+        <main className="home"id='home'>
              <Indexheader/>
 
              <div className="heroes">
@@ -35,7 +35,7 @@ function IndexPage(){
                 </div>
              </div>
                <div id="about"> <About/></div>
-                <Contact/>
+                <div id="contact"><Contact/></div>
 
                 
 

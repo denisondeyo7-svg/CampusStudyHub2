@@ -11,10 +11,10 @@ function Indexheader(){
                     </div>
 
                     <nav className='links'>
-                        <a href="">Home</a>
+                        <a href="#home">Home</a>
                         <a href="#about">About</a>
-                        <a href="">News & updates</a>
-                        <a href="">Contact</a>
+                        <a href="#news">News & updates</a>
+                        <a href="#contact">Contact</a>
                     
                     </nav>
                     <div className="call2actions">
