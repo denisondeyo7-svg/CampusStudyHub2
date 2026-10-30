@@ -227,6 +227,12 @@ button{
   background: #007bff;
 }
 
+.main-news{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  }
 .menu{
   display: none !important;
   display: flex;
@@ -1618,12 +1624,16 @@ footer .socials-links i{
   }
 
   .news-card-container{
-    margin: 12px;
-    max-width: 80%;
+    max-width: 100%;
+    width: 100%;
     gap: 22px;
-    margin-left: 62px;
+    padding: 14px;
+   
   }
-    
+   
+  .news-card{
+    min-width: 10rem;
+  }
   .index-contact{
     display: flex;
     flex-direction: column;
@@ -1641,7 +1651,7 @@ footer .socials-links i{
 
   .contact-wrapper{
   
-    width: 70%;
+    width: 100%;
   
     
   }
@@ -1656,6 +1666,19 @@ footer .socials-links i{
     width: 100% !important;
   
    
+  }
+
+  .main-news{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    }
+
+  .main-news .news-card-container{
+
+    padding: 0;
+    margin-left: 55px !important;
   }
 
 }

@@ -3,7 +3,7 @@ import newsimg from './assets/hero.png'
 function News(){
 
     return(
-       <div className="news">
+       <div className="main-news">
         <h1>News & <span className='dams'>Updates</span></h1>
 
         <div className="news-container">
