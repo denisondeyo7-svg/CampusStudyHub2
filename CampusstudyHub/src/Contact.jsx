@@ -1,11 +1,12 @@
-
-function Contact(){
+import Contact from './component/Contact'
+function ContactMe(){
 
     return(
-        <div className="contact">
-            <h1>Get in touch</h1>
+        <div className="contactMe">
+            <h1>Get in Touch</h1>
+            <Contact/>
         </div>
     )
 }
 
-export default Contact
+export default ContactMe

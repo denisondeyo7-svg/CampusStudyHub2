@@ -97,9 +97,9 @@ function LandingPage (){
                                 <h2>{AboutContent.lowerContent}</h2>
                             </div>
                         ))}
-                        <Link to="/About" id="morebtn">Eplore more</Link>
                     </div>
                 </div>
+                        <Link to="/About" id="morebtn">Eplore more About</Link>
             </div>
 <br />
             <div className="testimonials">

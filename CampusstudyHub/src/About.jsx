@@ -9,7 +9,7 @@ function About(){
     ] 
     
     const AboutContent1= [
-        {number:"1" ,Content:"Campus Study Hub is a student-focused web application designed to make academic life easier, more organized, and accessible. The platform brings essential academic resources and campus information together in one centralized hub, helping students access study materials, manage deadlines, stay updated on campus events, and keep track of important academic activities."},
+        {number:"1" ,title:"Who We are",Content:"Campus Study Hub is a student-focused web application designed to make academic life easier, more organized, and accessible. The platform brings essential academic resources and campus information together in one centralized hub, helping students access study materials, manage deadlines, stay updated on campus events, and keep track of important academic activities."},
         {number:"2",Content:"The system features a user-friendly dashboard, class and study resources, deadline management, campus news and events, user authentication, and a forgot-password feature to support account recovery."},
         {number:"3",Content:"Built with a focus on usability, accessibility, and practical problem-solving, Campus Study Hub demonstrates how web technology can simplify student life by making academic information easier to manage and access."}
     ]
@@ -18,7 +18,6 @@ function About(){
         <div className="about">
            
             <h1>About <span className="dams">us</span></h1>
-            
                
             <div className="about-wrapper">
                 
@@ -46,7 +45,7 @@ function About(){
             <div className="about2">
                 {AboutContent1.map((mycontent)=>(
                     <div className="card"key={mycontent.number}>
-                       
+                        
                         <p>{mycontent.Content}</p>
                     </div>
                 ))}
