@@ -4,7 +4,7 @@ import image2 from "./assets/Ej5aH_TB3yBICdOTnC0EK-9Q9XVb-_ok-8apZ4Lsr_PLRcKSz65
 import image3 from "./assets/logo.png"
 import { useState } from "react"
 
-import {Link} from "react-router-dom"
+
 function LandingPage (){
 
     const[open,setopenbox]=useState(false);
@@ -77,7 +77,7 @@ function LandingPage (){
 
             <div className="about">
                 <br />
-                <h1 className="abouth">Campus Study Hub</h1>
+                <h1 className="abouth">About</h1>
                     <br />
                 <div className="about-wrapper">
                     <div className="about-content-card">
@@ -99,7 +99,7 @@ function LandingPage (){
                         ))}
                     </div>
                 </div>
-                        <Link to="/About" id="morebtn">Eplore more About</Link>
+                        
             </div>
 <br />
             <div className="testimonials">

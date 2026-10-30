@@ -57,7 +57,7 @@ function Footer(){
 
             </div><br />
             <div className="subfooter">
-                <small>All rights reserved | Campus Study Hub <br /> Developed By <a href="https://dentech-nu.vercel.app/">Denis</a></small>
+                <small>©Campus Study Hub <br /> Developed By <a href="https://dentech-nu.vercel.app/">Denis</a></small>
             </div>
         </footer>
     )

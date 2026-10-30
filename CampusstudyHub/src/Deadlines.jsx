@@ -3,7 +3,7 @@ function Deadlines(){
 
     return(
         <div className="deadlines">
-            <h1>Deadlines</h1>
+            <h1>Dead<span className="dams">lines</span></h1>
         </div>
     )
 }

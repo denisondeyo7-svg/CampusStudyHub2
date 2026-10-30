@@ -3,6 +3,7 @@ import Indexheader from './component/Indexheader'
 import Explore from './component/Call2actions'
 import About from './component/About'
 import Contact from './component/Contact'
+import News from './component/Index-news'
 
 function IndexPage(){
  
@@ -35,6 +36,9 @@ function IndexPage(){
                 </div>
              </div>
                <div id="about"> <About/></div>
+               <div id="news">
+                    <News/>
+                </div>
                 <div id="contact"><Contact/></div>
 
                 

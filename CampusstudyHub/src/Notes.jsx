@@ -10,7 +10,7 @@ function Notes(){
 
     return(
         <div className="notes">
-            <h1>Notes</h1>
+            <h1>Not<span className="dams">es</span></h1>
 
             <div className="notes-wrapper">
                 <p>Access notes here</p>
