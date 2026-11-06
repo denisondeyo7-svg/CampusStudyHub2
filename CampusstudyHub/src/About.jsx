@@ -41,7 +41,7 @@ function About(){
                     
                 </div>
             </div>
-        
+        <br />
             <div className="about2">
                 {AboutContent1.map((mycontent)=>(
                     <div className="card"key={mycontent.number}>

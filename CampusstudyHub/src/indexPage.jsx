@@ -11,6 +11,10 @@ function IndexPage(){
         <main className="home"id='home'>
              <Indexheader/>
 
+             <div className="whatsapp">
+                <a href="https://wa.me/254726534460?text=Hello%20Denis%2C%20I%20came%20across%20Campus%20Study%20Hub%20online%20and%20was%20wondering%20if%20we%20could%20connect%20and%20discuss%20something.%20Would%20you%20be%20open%20to%20that%3F" target="_blank" rel="noopener noreferrer"><i className="fab fa-whatsapp"></i></a>
+            </div>
+
              <div className="heroes">
                 <div className="heros-image">
                     <img src={heroimage} alt="image" />

@@ -108,6 +108,8 @@ header{
   color: #292828;
   font-weight: 500;
 }
+
+
 .sidebar .navlink:hover{
   background: #ffffff48;
   
@@ -190,6 +192,10 @@ header{
   
 }
 
+.links a.active {
+  border-radius: 8px;
+  border:  1px solid #fff;
+}
 .call2actions{
   position: relative;
   margin-right: 22px;
@@ -397,7 +403,7 @@ button{
 }
 
 .dams{
-  color: #007bff;
+  color: goldenrod;
 }
 .texts h1{
   color: #fff;
@@ -1197,7 +1203,7 @@ button{
   flex-direction: column;
   align-self: center;
   align-items: center;
-  width: 80%;
+  width: 70%;
 }
 .contact{
   width: 100%;
