@@ -15,6 +15,7 @@ import IndexPage from './indexPage.jsx'
 import Login from './Login.jsx'
 import Register from './Register.jsx'
 import PasswordReset from './PassReset'
+import Account from './Account'
 
 import './App.css'
 
@@ -33,6 +34,7 @@ function navs() {
     <BrowserRouter>
     
       <Routes>
+        
         <Route path="/"element={
           <>
             
@@ -60,6 +62,14 @@ function navs() {
            
             <PasswordReset/>
       
+            </>
+        }/>
+        <Route path="/Accounts"element={
+          <>
+
+            <Navbar/>
+            <Account/>
+            <Footer/>
             </>
         }/>
         <Route path="/Dashboard"element={

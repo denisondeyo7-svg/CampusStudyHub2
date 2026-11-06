@@ -3,6 +3,7 @@ import image1 from "./assets/ETn3AAsFMkPA_-NciUOrnhcb6C-E_uqZOe2bF4ZaIYYsyliyayb
 import image2 from "./assets/Ej5aH_TB3yBICdOTnC0EK-9Q9XVb-_ok-8apZ4Lsr_PLRcKSz65RPUm8A-YH-3xaSkCtPi1Lv-mcUEfE_IimiKG0Zdz3EkuWaZ-w4tritlzy2RZ7p51_5Kl3-vPKLH6Ev_V3HevCsujoHMrDneoB0D2iTT108I5HOHf4qAdVNNvw57Eckd17Wc.jpg"
 import image3 from "./assets/logo.png"
 import { useState } from "react"
+import Avatar from './component/Avatar'
 
 
 function LandingPage (){
@@ -34,7 +35,49 @@ function LandingPage (){
         {number:"4", limit:"7+" ,name:"Assessments",i:"fa-regular fa-file"}
     ]
 
-    
+    const chats =[
+        {
+            number:"1",
+            sender:"Lil Den",
+            dp:"LD",
+            message:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, porro nemo.",
+        },
+
+        {
+            number:"2",
+            sender:"Lil Den",
+            dp:"LD",
+            message:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, porro nemo.",
+        },
+
+        {
+            number:"3",
+            sender:"Lil Den",
+            dp:"LD",
+            message:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, porro nemo.",
+        },
+
+        {
+            number:"4",
+            sender:"Lil Den",
+            dp:"LD",
+            message:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, porro nemo.",
+        },
+
+        {
+            number:"5",
+            sender:"Lil Den",
+            dp:"LD",
+            message:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, porro nemo.",
+        },
+
+        {
+            number:"6",
+            sender:"Jay Den",
+            dp:"JD",
+            message:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, porro nemo.",
+        }
+    ];
     return(
 
         <section className="landingpage">
@@ -49,9 +92,7 @@ function LandingPage (){
                     
                 </div>
 
-                <div className="logout">
-                    <a href="" id="logoutbtn">Logout <i className="fas fa-power-off"></i></a>
-                </div>
+                <Avatar/>
             </header>
 
             <div className="landing-page-Content-Wrapper">
@@ -154,7 +195,7 @@ function LandingPage (){
 
 
             <div className="online-chart"title="talk to with others" onClick={()=>setopenbox(!open)}>
-                <i className="fas fa-message"></i>
+                <i className={open ? "fas fa-xmark":"fas fa-message"}></i>
             </div>
 
 
@@ -169,189 +210,30 @@ function LandingPage (){
                     <div className="box-content">
                         <div className="message-container">
                     
-                            <div className="message-card">
-                                <div className="message-top">
-                                    <small>Lil Den</small>
-                                    <div className="deletemessage">
-                                        <i className="fas fa-times"></i>
+                            {chats.map((chat)=>(
+                                <div className="message-card" key={chat.number}>
+                                    <div className="message-top">
+                                        <small>{chat.sender}</small>
+                                        <div className="deletemessage">
+                                            <i className="fas fa-times"></i>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="bodydetails">
-                                    <div className="dp">
-                                        <p>LD</p>
-                                    </div>
-                                    <div className="message">
-                                        <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, porro nemo.</small>
-                                    </div>
+                                    <div className="bodydetails">
+                                        <div className="dp">
+                                            <small>{chat.dp}</small>
+                                        </div>
+                                        <div className="message">
+                                            <small>{chat.message}</small>
+                                        </div>
 
-                                    
+                                        
+                                    </div>
                                 </div>
-                            </div>
+                            ))}
 
-                            <div className="message-card">
-                                <div className="message-top">
-                                    <small>Lil Den</small>
-                                    <div className="deletemessage">
-                                        <i className="fas fa-times"></i>
-                                    </div>
-                                </div>
-                                <div className="bodydetails">
-                                    <div className="dp">
-                                        <p>LD</p>
-                                    </div>
-                                    <div className="message">
-                                        <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, porro nemo.</small>
-                                    </div>
+                            
+                            
 
-                                    
-                                </div>
-                            </div>
-                            <div className="message-card">
-                                <div className="message-top">
-                                    <small>Lil Den</small>
-                                    <div className="deletemessage">
-                                        <i className="fas fa-times"></i>
-                                    </div>
-                                </div>
-                                <div className="bodydetails">
-                                    <div className="dp">
-                                        <p>LD</p>
-                                    </div>
-                                    <div className="message">
-                                        <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, porro nemo.</small>
-                                    </div>
-
-                                    
-                                </div>
-                            </div>
-                            <div className="message-card">
-                                <div className="message-top">
-                                    <small>Lil Den</small>
-                                    <div className="deletemessage">
-                                        <i className="fas fa-times"></i>
-                                    </div>
-                                </div>
-                                <div className="bodydetails">
-                                    <div className="dp">
-                                        <p>LD</p>
-                                    </div>
-                                    <div className="message">
-                                        <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, porro nemo.</small>
-                                    </div>
-
-                                    
-                                </div>
-                            </div>
-                            <div className="message-card">
-                                <div className="message-top">
-                                    <small>Lil Den</small>
-                                    <div className="deletemessage">
-                                        <i className="fas fa-times"></i>
-                                    </div>
-                                </div>
-                                <div className="bodydetails">
-                                    <div className="dp">
-                                        <p>LD</p>
-                                    </div>
-                                    <div className="message">
-                                        <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, porro nemo.</small>
-                                    </div>
-
-                                    
-                                </div>
-                            </div>
-                            <div className="message-card">
-                                <div className="message-top">
-                                    <small>Lil Den</small>
-                                    <div className="deletemessage">
-                                        <i className="fas fa-times"></i>
-                                    </div>
-                                </div>
-                                <div className="bodydetails">
-                                    <div className="dp">
-                                        <p>LD</p>
-                                    </div>
-                                    <div className="message">
-                                        <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, porro nemo.</small>
-                                    </div>
-
-                                    
-                                </div>
-                            </div>
-
-                            <div className="message-card">
-                                <div className="message-top">
-                                    <small>Lil Den</small>
-                                    <div className="deletemessage">
-                                        <i className="fas fa-times"></i>
-                                    </div>
-                                </div>
-                                <div className="bodydetails">
-                                    <div className="dp">
-                                        <p>LD</p>
-                                    </div>
-                                    <div className="message">
-                                        <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, porro nemo.</small>
-                                    </div>
-
-                                    
-                                </div>
-                            </div>
-                            <div className="message-card">
-                                <div className="message-top">
-                                    <small>Lil Den</small>
-                                    <div className="deletemessage">
-                                        <i className="fas fa-times"></i>
-                                    </div>
-                                </div>
-                                <div className="bodydetails">
-                                    <div className="dp">
-                                        <p>LD</p>
-                                    </div>
-                                    <div className="message">
-                                        <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, porro nemo.</small>
-                                    </div>
-
-                                    
-                                </div>
-                            </div><div className="message-card">
-                                <div className="message-top">
-                                    <small>Lil Den</small>
-                                    <div className="deletemessage">
-                                        <i className="fas fa-times"></i>
-                                    </div>
-                                </div>
-                                <div className="bodydetails">
-                                    <div className="dp">
-                                        <p>LD</p>
-                                    </div>
-                                    <div className="message">
-                                        <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, porro nemo.</small>
-                                    </div>
-
-                                    
-                                </div>
-                            </div>
-                                <div className="message-card">
-                                <div className="message-top">
-                                    <small>Del Mark</small>
-                                    <div className="deletemessage">
-                                        <i className="fas fa-times"></i>
-                                    </div>
-                                </div>
-                                <div className="bodydetails">
-                                    <div className="dp">
-                                        <p>DM</p>
-                                    </div>
-                                    <div className="message">
-                                        <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, porro nemo.</small>
-                                    </div>
-
-                                    
-                                </div>
-
-                                
-                            </div>
                         
                         </div>
                         <form action="" method="post">

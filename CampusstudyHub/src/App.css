@@ -61,7 +61,7 @@ header{
 .logo{
   display: flex;
   width: auto;
-  height: 7rem;
+  height: 6rem;
   overflow: hidden;
 }
 
@@ -71,6 +71,7 @@ header{
   object-fit: cover;
 }
 .brandname h2{
+  font-size: 14px;
   color: goldenrod;
 }
 .Developer{
@@ -157,8 +158,8 @@ header{
 .my-index-header-logo{
   margin-left: 22px;
   display: flex;
-  width: 7rem;
-  height: 7rem;
+  width: 6rem;
+  height: 6rem;
   overflow: hidden;
 }
 
@@ -438,14 +439,106 @@ button{
   font-size: 16px;
   transition: .3s ease;
 }
-#logoutbtn{
+
+
+.logout{
   position: absolute;
+  display: flex;
   right: 0;
+  align-items: center;
+  justify-content: center;
+  border:1px solid  goldenrod;
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  padding: 13px;
+  box-shadow:  0 0 4px #999;
+}
+#logoutbtn{
+  
   text-decoration: none;
   color: #00f;
-  width: auto;
   font-size: 16px;
 
+}
+
+.profile-box{
+  box-shadow:  0 0 4px #999;
+  background: #fff;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: fixed;
+  z-index: 800;
+  display: flex;
+  flex-direction: column;
+  top: 5.6rem;
+}
+.account-wrapper-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+}
+
+.account-wrapper-container h1{
+  animation: fade .6s ease;
+  animation-delay: .3s;
+}
+.account-container{
+  width: 90%;
+  height: auto;
+  align-items: center;
+
+}
+
+.account-card{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-self: center;
+  justify-self: center;
+  min-width: 40%;
+}
+
+.details{
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.details i{
+  padding: 10px;
+  background: #0000001c;
+  border-radius: 10%;
+  font-size: 22px;
+  color: #666;
+}
+
+.account-details{
+  display: flex;
+  flex-direction: column;
+}
+
+.account-details p{
+  color: #999;
+}
+.account-details small{
+  color: #292828;
+}
+
+#edit_profile{
+  padding: 13px;
+  float: right;
+  background: goldenrod;
+  border: none;
+  border-radius: 40px;
+}
+.logoutbtn a,
+.user a{
+  color: #007bff;
 }
 #exploremore:hover{
   background: #fff;
@@ -691,8 +784,8 @@ button{
 
 .box-content form #message{
   outline: none;
-  border-radius: 30px;
-  padding: 10px;
+  border-radius: 5px;
+  padding: 15px;
   width: 100%;
   background: #fff;
   border: 1px solid #999;
@@ -721,7 +814,7 @@ button{
   flex-direction: column;
   gap: 17px;
   height: 50px;
-  overflow-y: scroll;
+  overflow-y: auto;
   padding: 10px;
 }
 
@@ -1441,6 +1534,7 @@ button{
 
 .login-form form{
   padding: 15px;
+  min-width: 30%;
   width: 20rem;
   display: flex;
   flex-direction: column;
@@ -1513,6 +1607,7 @@ button{
   justify-content: center;
   justify-self: center;
   padding: 10px;
+  border: none;
   width: 90%;
   margin-left: 29px;
   background: #007bff;
@@ -1641,6 +1736,136 @@ footer .socials-links i{
 }
 
 @media screen and (max-width:360px){
+  
+  .brandname h2{
+    font-size: 12px;
+    color: goldenrod;
+    
+
+  }
+  .logout{
+    height: 1.5rem;
+    width: 1.5rem;
+    padding: 13px;
+    box-shadow:  0 0 4px #999;
+  }
+  
+  .logout i{
+    font-size: 10px;
+
+  }
+
+  .profile-box{
+    right: 12px;
+
+  }
+  .online-chart{
+    right: 12px;
+    height: 3rem;
+    width: 3rem;
+    bottom: 5rem;
+  }
+  
+  .whatsapp{
+    right: 12px;
+    height: 3rem;
+    width: 3rem;
+    bottom: 15px;
+    
+  }
+
+  .whatsapp i{
+    font-size: 30px;
+  }
+
+  .chatbox{
+    bottom: 9rem;
+    height: 350px !important;
+  }
+  
+  .box-content form{
+    position: absolute;
+    top: 245px;
+    z-index: 1000;
+    width: 100%;
+  }
+
+
+  .box-content form .input{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 90%;
+  }
+
+  .box-content form #message{
+    outline: none;
+    border-radius: 30px;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #999;
+    color: #000;
+  }
+
+  
+
+  .box-content form button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    width: 2rem !important;
+    background: #007bff !important;
+
+  }
+  
+  .message-container{
+    width: 93%;
+    position: relative;
+    top: 1px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 250px !important;
+    
+  }
+
+  .message-card{
+    font-size: 14px;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+ 
+  }
+
+
+
+  .Developer{
+    color: #292828c7;
+    font-size: 13px;
+    
+
+  }
+  .call2actions{
+    max-width: 80% !important;
+  }
+  .my-index-header-logo{
+    margin-left: 22px;
+    display: flex;
+    width: 5rem !important;
+    height: 5rem !important;
+    overflow: hidden;
+}
+  .Menubtn{
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 18px !important;
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+
+  
   .stats-container{
     grid-template-columns: repeat(1 ,1fr) !important;    
   }
@@ -1864,13 +2089,86 @@ footer .socials-links i{
     
   }
 
-  .chatbox{
-    height: 55vh;
+    .online-chart{
+    right: 22px;
+    height: 3rem;
+    width: 3rem;
+    bottom: 5rem;
+  }
+  
+  .whatsapp{
+    right: 22px;
+    height: 3rem;
+    width: 3rem;
+    bottom: 15px;
+    
   }
 
-  .message-container{
-    height: 400px;
+  .whatsapp i{
+    font-size: 30px;
   }
+
+  .chatbox{
+    bottom: 9rem;
+    height: 350px !important;
+  }
+  
+  .box-content form{
+    position: absolute;
+    top: 240px !important;
+    z-index: 1000;
+    width: 100%;
+  }
+
+
+  .box-content form .input{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 94%;
+  }
+
+  .box-content form #message{
+    outline: none;
+    padding: 10px;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #999;
+    color: #000;
+  }
+
+  
+
+  .box-content form button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    width: 2rem !important;
+    background: #007bff !important;
+
+  }
+  
+  .message-container{
+    width: 93%;
+    position: relative;
+    top: 1px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 210px !important;
+    
+  }
+
+  .message-card{
+    font-size: 14px;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+ 
+  }
+
+
 
   .mainfooter{
     padding: 10px;
@@ -1910,6 +2208,157 @@ footer .socials-links i{
   .Menubtn{
     display: block;
   }
+ 
+    .online-chart{
+    right: 12px;
+    height: 3rem;
+    width: 3rem;
+    bottom: 5rem;
+  }
   
+  .whatsapp{
+    right: 12px;
+    height: 3rem;
+    width: 3rem;
+    bottom: 15px;
+    
+  }
+
+  .whatsapp i{
+    font-size: 30px;
+  }
+
+  .chatbox{
+    bottom: 9rem;
+    height: 350px !important;
+  }
+  
+  .box-content form{
+    position: absolute;
+    top: 230px;
+    z-index: 1000;
+    width: 100%;
+  }
+
+
+  .box-content form .input{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 90%;
+  }
+
+  .box-content form #message{
+    outline: none;
+    border-radius: 30px;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #999;
+    color: #000;
+  }
+
+  
+
+  .box-content form button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    width: 2rem !important;
+    background: #007bff !important;
+
+  }
+  
+  .message-container{
+    width: 93%;
+    position: relative;
+    top: 1px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 250px !important;
+    
+  }
+
+  .message-card{
+    font-size: 14px;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+ 
+  }
+
+
+
+}
+
+
+
+@media screen and (min-width:900px){
+ 
+  
+
+  .chatbox{
+    bottom: 8.2rem;
+    height: 450px !important;
+    width: 330px;
+  }
+  
+  .box-content form{
+    position: absolute;
+    top: 330px;
+    z-index: 1000;
+    width: 100%;
+  }
+
+
+  .box-content form .input{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 90%;
+  }
+
+  .box-content form #message{
+    outline: none;
+    border-radius: 30px;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #999;
+    color: #000;
+  }
+
+  
+
+  .box-content form button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    width: 2rem !important;
+    background: #007bff !important;
+
+  }
+  
+  .message-container{
+    width: 93%;
+    position: relative;
+    top: 1px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 300px !important;
+    
+  }
+
+  .message-card{
+    font-size: 14px;
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+ 
+  }
+
+
 
 }
