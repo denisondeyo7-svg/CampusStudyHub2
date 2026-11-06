@@ -48,6 +48,10 @@ function LandingPage (){
                     <h2>Campus Study Hub <br /><span className="Developer">Developed By Denis</span></h2>
                     
                 </div>
+
+                <div className="logout">
+                    <a href="" id="logoutbtn">Logout <i className="fas fa-power-off"></i></a>
+                </div>
             </header>
 
             <div className="landing-page-Content-Wrapper">
