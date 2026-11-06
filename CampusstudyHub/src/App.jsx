@@ -16,12 +16,14 @@ import Login from './Login.jsx'
 import Register from './Register.jsx'
 import PasswordReset from './PassReset'
 import Account from './Account'
+import NotfoundPage from './Notfound.jsx'
 
 import './App.css'
 
 function App(){
   return(
     <>
+      
       <IndexPage/>
       <Footer/>
     </>
@@ -34,6 +36,15 @@ function navs() {
     <BrowserRouter>
     
       <Routes>
+
+        <Route path="*" element={
+
+            <>
+              <NotfoundPage />
+            </>
+          } 
+          
+        />
         
         <Route path="/"element={
           <>
@@ -41,6 +52,8 @@ function navs() {
             <App/>
             </>
         }/>
+
+
         <Route path="/Login"element={
           <>
            
