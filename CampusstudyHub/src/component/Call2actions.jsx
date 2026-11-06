@@ -1,7 +1,8 @@
+import {Link} from 'react-router-dom'
 function Explore(){
  return(
     <>
-        <button id="explore">Explore More <i className="fas fa-arrow-right"></i></button>
+        <Link to="/Login" id="explore">Explore More <i className="fas fa-arrow-right"></i></Link>
         
     </>
  )

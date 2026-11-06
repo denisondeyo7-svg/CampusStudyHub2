@@ -1,12 +1,13 @@
 import Menu from './Menu'
 import logo from '../assets/logo.png'
+import { Link } from 'react-router-dom'
 function Indexheader(){
 
     return(
         <>
             <div className="my-index-header">
                 <div className="my-index-header-logo">
-                    <img src={logo} alt="" />
+                    <img src={logo} alt="logo" />
 
                     </div>
 
@@ -18,8 +19,8 @@ function Indexheader(){
                     
                     </nav>
                     <div className="call2actions">
-                        <button id='loginbtn'>Login</button>
-                        <button id='regbtn'>Get started</button>
+                        <Link to="/Login" id='loginbtn'>Login</Link>
+                        <Link to="/Register" id='regbtn'>Get started</Link>
                    </div>
                   <Menu/>
                         

@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from 'react-router-dom'
 
 function Menu(){
 
@@ -17,8 +18,8 @@ function Menu(){
                     <a href="#contact" onClick={()=> SetOpen(false)}>Contact</a>
 
                     <div className="call2actions">
-                        <button id='myloginbtn'>Login</button>
-                        <button id='myregbtn'>Get started</button>
+                        <Link to="/Login" id='myloginbtn'>Login</Link>
+                        <Link to="/Register" id='myregbtn'>Get started</Link>
                    </div>
                 </div>
             )}

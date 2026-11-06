@@ -1,4 +1,6 @@
+import {Link} from 'react-router-dom'
 function About(){
+
     const AboutContents= [
         {number:"1" ,small:"Hear from us" ,h1:"Why Choose us",Content:"At Campus Study Hub, we ensure that you never miss an important deadline. Stay informed with the latest campus news and updates, access your academic timetables, and find revision PDFs and study notes to support your learning journey. ",lowerContent:"Your partner in academic success!"},
     ] 
@@ -24,7 +26,7 @@ function About(){
                         </div>
                     ))}
                     
-            <button id="exploremore">Explore More <i className="fas fa-arrow-right"></i></button>
+            <Link to="/About" id="exploremore">Explore More <i className="fas fa-arrow-right"></i></Link>
                 </div>
             </div>
         

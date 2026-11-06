@@ -12,7 +12,9 @@ import About from './About.jsx'
 import Testimonial from './Testimonials.jsx'
 import Contact from './Contact.jsx'
 import IndexPage from './indexPage.jsx'
-
+import Login from './Login.jsx'
+import Register from './Register.jsx'
+import PasswordReset from './PassReset'
 
 import './App.css'
 
@@ -20,6 +22,7 @@ function App(){
   return(
     <>
       <IndexPage/>
+      <Footer/>
     </>
   )
 }
@@ -36,10 +39,34 @@ function navs() {
             <App/>
             </>
         }/>
+        <Route path="/Login"element={
+          <>
+           
+            <Login/>
+      
+            </>
+        }/>
+
+        <Route path="/Register"element={
+          <>
+           
+            <Register/>
+      
+            </>
+        }/>
+
+        <Route path="/PasswordReset"element={
+          <>
+           
+            <PasswordReset/>
+      
+            </>
+        }/>
         <Route path="/Dashboard"element={
           <>
             <Navbar/>
             <LandingPage/>
+            <Footer />
       
             </>
         }/>
@@ -48,6 +75,7 @@ function navs() {
           <>
             <Navbar/>
             <Timetable/>
+            <Footer />
             
             </>
         }/>
@@ -57,6 +85,7 @@ function navs() {
             <Navbar/>
             <Notes/>
             
+            <Footer />
             </>
         }/>
 
@@ -64,6 +93,7 @@ function navs() {
           <>
             <Navbar/>
             <Assessments/>
+            <Footer />
             
             </>
         }/>
@@ -72,6 +102,7 @@ function navs() {
           <>
             <Navbar/>
             <Revisionpapers/>
+            <Footer />
             
             </>
         }/>
@@ -80,6 +111,7 @@ function navs() {
           <>
             <Navbar/>
             <News/>
+            <Footer />
             
             </>
         }/>
@@ -88,6 +120,7 @@ function navs() {
           <>
             <Navbar/>
             <Deadlines/>
+            <Footer />
             
             </>
         }/>
@@ -96,6 +129,7 @@ function navs() {
           <>
            <Navbar/>
             <About/>
+            <Footer />
             
             </>
         }/>
@@ -104,6 +138,7 @@ function navs() {
           <>
            <Navbar/>
             <Testimonial/>
+            <Footer />
             
             </>
         }/>
@@ -112,13 +147,14 @@ function navs() {
           <>
             <Navbar/>
             <Contact/>
+            <Footer />
             
             </>
         }/>
         
       </Routes>
      
-      <Footer />
+      
     </BrowserRouter>
   )
 }
