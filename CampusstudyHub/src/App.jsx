@@ -1,4 +1,4 @@
-import { BrowserRouter ,Routes ,Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './Sidebar.jsx'
 import LandingPage from './Heros.jsx'
 import Footer from './Footer.jsx'
@@ -17,15 +17,27 @@ import Register from './Register.jsx'
 import PasswordReset from './PassReset'
 import Account from './Account'
 import NotfoundPage from './Notfound.jsx'
+import Update from './Update'
+
+{/* Admin */ }
+import Dashboard from './Admin/Dashboard'
+import Members from './Admin/Members.jsx'
+import AllNotes from './Admin/AllNotes'
+import AllAssessments from './Admin/AllAssessments.jsx'
+import Revision from './Admin/Revision.jsx'
+import AllNews from './Admin/AllNews'
+import Myaccount from './Admin/Myaccount'
+
 
 import './App.css'
 
-function App(){
-  return(
+
+function App() {
+  return (
     <>
-      
-      <IndexPage/>
-      <Footer/>
+
+      <IndexPage />
+      <Footer />
     </>
   )
 }
@@ -34,150 +46,237 @@ function App(){
 function navs() {
   return (
     <BrowserRouter>
-    
+
       <Routes>
 
         <Route path="*" element={
 
-            <>
-              <NotfoundPage />
-            </>
-          } 
-          
+          <>
+            <NotfoundPage />
+          </>
+        }
+
         />
-        
-        <Route path="/"element={
-          <>
-            
-            <App/>
-            </>
-        }/>
 
+        <Route path="/Home" element={
 
-        <Route path="/Login"element={
           <>
-           
-            <Login/>
-      
-            </>
-        }/>
+            <Dashboard />
+          </>
+        }
 
-        <Route path="/Register"element={
-          <>
-           
-            <Register/>
-      
-            </>
-        }/>
+        />
+        <Route path="/Members" element={
 
-        <Route path="/PasswordReset"element={
-          <>
-           
-            <PasswordReset/>
-      
-            </>
-        }/>
-        <Route path="/Accounts"element={
           <>
 
-            <Navbar/>
-            <Account/>
-            <Footer/>
-            </>
-        }/>
-        <Route path="/Dashboard"element={
+            <Members />
+          </>
+        }
+
+        />
+
+        <Route path="/NotesManagement" element={
+
           <>
-            <Navbar/>
-            <LandingPage/>
+
+            <AllNotes />
+          </>
+        }
+
+        />
+
+        <Route path="/AssessmentsTests" element={
+
+          <>
+
+            <AllAssessments />
+          </>
+        }
+
+        />
+
+        <Route path="/RevisionPDFs" element={
+
+          <>
+
+            <Revision />
+          </>
+        }
+
+        />
+
+        <Route path="/NewsManagement" element={
+
+          <>
+
+            <AllNews />
+          </>
+        }
+
+        />
+
+        <Route path="/NewsManagement" element={
+
+          <>
+
+            <AllNews />
+          </>
+        }
+
+        />
+        <Route path="/Myaccount" element={
+
+          <>
+
+            <Myaccount />
+          </>
+        }
+
+        />
+
+
+
+        <Route path="/" element={
+          <>
+
+            <App />
+          </>
+        } />
+
+
+        <Route path="/Login" element={
+          <>
+
+            <Login />
+
+          </>
+        } />
+
+        <Route path="/Register" element={
+          <>
+
+            <Register />
+
+          </>
+        } />
+
+        <Route path="/PasswordReset" element={
+          <>
+
+            <PasswordReset />
+
+          </>
+        } />
+
+        <Route path="/UpdateAccount" element={
+          <>
+
+            <Update />
+
+          </>
+        } />
+        <Route path="/Accounts" element={
+          <>
+
+            <Navbar />
+            <Account />
             <Footer />
-      
-            </>
-        }/>
-
-        <Route path="/Timetable"element={
+          </>
+        } />
+        <Route path="/Dashboard" element={
           <>
-            <Navbar/>
-            <Timetable/>
+            <Navbar />
+            <LandingPage />
             <Footer />
-            
-            </>
-        }/>
 
-        <Route path="/Notes"element={
-          <>
-            <Navbar/>
-            <Notes/>
-            
-            <Footer />
-            </>
-        }/>
+          </>
+        } />
 
-        <Route path="/Assessments"element={
+        <Route path="/Timetable" element={
           <>
-            <Navbar/>
-            <Assessments/>
+            <Navbar />
+            <Timetable />
             <Footer />
-            
-            </>
-        }/>
 
-        <Route path="/RevisionPapers"element={
-          <>
-            <Navbar/>
-            <Revisionpapers/>
-            <Footer />
-            
-            </>
-        }/>
+          </>
+        } />
 
-        <Route path="/News"element={
+        <Route path="/Notes" element={
           <>
-            <Navbar/>
-            <News/>
-            <Footer />
-            
-            </>
-        }/>
+            <Navbar />
+            <Notes />
 
-        <Route path="/Deadlines"element={
-          <>
-            <Navbar/>
-            <Deadlines/>
             <Footer />
-            
-            </>
-        }/>
+          </>
+        } />
 
-        <Route path="/About"element={
+        <Route path="/Assessments" element={
           <>
-           <Navbar/>
-            <About/>
+            <Navbar />
+            <Assessments />
             <Footer />
-            
-            </>
-        }/>
 
-        <Route path="/Testimonials"element={
-          <>
-           <Navbar/>
-            <Testimonial/>
-            <Footer />
-            
-            </>
-        }/>
+          </>
+        } />
 
-        <Route path="/Contact"element={
+        <Route path="/RevisionPapers" element={
           <>
-            <Navbar/>
-            <Contact/>
+            <Navbar />
+            <Revisionpapers />
             <Footer />
-            
-            </>
-        }/>
-        
+
+          </>
+        } />
+
+        <Route path="/News" element={
+          <>
+            <Navbar />
+            <News />
+            <Footer />
+
+          </>
+        } />
+
+        <Route path="/Deadlines" element={
+          <>
+            <Navbar />
+            <Deadlines />
+            <Footer />
+
+          </>
+        } />
+
+        <Route path="/About" element={
+          <>
+            <Navbar />
+            <About />
+            <Footer />
+
+          </>
+        } />
+
+        <Route path="/Testimonials" element={
+          <>
+            <Navbar />
+            <Testimonial />
+            <Footer />
+
+          </>
+        } />
+
+        <Route path="/Contact" element={
+          <>
+            <Navbar />
+            <Contact />
+            <Footer />
+
+          </>
+        } />
+
       </Routes>
-     
-      
+
+
     </BrowserRouter>
   )
 }

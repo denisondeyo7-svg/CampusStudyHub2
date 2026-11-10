@@ -55,6 +55,10 @@ function Navbar(){
                     <div className="navlink">
                         <i className="fas fa-phone"></i><Link to="/Contact" onClick={()=>setisCollpsed(!isCollapsed)}>     Contact Us</Link>
                     </div>
+
+                    <div className="navlink">
+                        <i className="fas fa-gear"></i><Link to="/Accounts" onClick={()=>setisCollpsed(!isCollapsed)}>     Profile</Link>
+                    </div>
                             
                     
                 </nav>

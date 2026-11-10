@@ -581,6 +581,8 @@ button{
 }
 
 #edit_profile{
+  text-decoration: none;
+  color: #000;
   padding: 13px;
   float: right;
   background: goldenrod;
@@ -1758,8 +1760,223 @@ footer .socials-links i{
   color: #c2c0c0;
 }
 
+.admin-dashboard{
+  display: flex;
+  width: 100%;
+  
+  
+}
 
 
+
+.sidebar-admin{
+  overflow-y: auto;
+  height: 100vh;
+  background: #1a2e38;
+  display: flex;
+  flex-direction: column;
+  width: auto;
+
+}
+
+.admin-navs,
+.sidebar-admin a{
+  padding: 10px 14px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.main{
+  background: #ffff;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+
+
+
+}
+
+.fa-coffee{
+  color: goldenrod;
+  padding: 8px;
+  border-radius: 40px;
+  background: #33333321;
+  border: 1px solid #333;
+}
+
+.top-content{
+  margin:13px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+  position: relative;
+  padding: 15px;
+  max-width: 90%;
+  background: #fff;
+  box-shadow:  0 0 3px #999;
+}
+
+
+
+#admin-menu-btn{
+  margin: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border:1px solid #fff;
+  color: #fff;
+  background: #ffffff42;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.admin-card-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 96%;
+  gap: 32px;
+}
+
+.pageTitle{
+  color: #007bff;
+  border-bottom: 1px solid #007bff;
+}
+
+.members-list{
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 90%;
+  overflow-x: auto;
+ 
+}
+
+table{
+  border-collapse: collapse;
+}
+thead{
+  padding: 10px;
+  background: #33333333;
+}
+th:nth-child(1){
+  padding: 10px;
+  color: #007bff;
+}
+#Addnotesbtn{
+  text-decoration: none;
+  color: #000;
+  padding: 13px;
+  background: goldenrod;
+  border: none;
+  border-radius: 40px;
+  float: right;
+}
+#delete{
+ 
+  text-align: center;
+  color: #f00f;
+}
+
+.Members-container{
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 90%;
+  overflow-y: auto;
+   position: relative;
+  height: 75vh;
+
+}
+.cards-wrapper{
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+  width: 100%;
+  margin:13px 22px;
+ 
+}
+
+.admin-card{
+  flex-grow: 1;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  justify-content: center;
+  width: 12rem;
+  padding: 22px;
+  box-shadow:  0 0 3px #999;
+  height: 100px;
+  transition: .3s ease;
+}
+
+.admin-card:nth-child(1){
+  border-left: 5px solid #007bff;
+}
+
+.admin-card:nth-child(2){
+  border-left: 5px solid #0baddf;
+}
+
+.admin-card:nth-child(3){
+  border-left: 5px solid rgb(236, 182, 46);
+}
+.admin-card:nth-child(4){
+  border-left: 5px solid #f50;
+}
+.admin-card:nth-child(5){
+  border-left: 5px solid #f70;
+}
+.admin-card:nth-child(6){
+  border-left: 5px solid #f80;
+}
+.admin-card:nth-child(7){
+  border-left: 5px solid #f90;
+}
+.admin-card:last-child{
+  border-left: 5px solid rgb(196, 196, 6);
+}
+
+
+.admin-card:hover{
+  transform: translateY(-3px);
+}
+.card-top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+}
+
+.admin-card i{
+  font-size: 30px;
+  color: rgb(3, 168, 39);
+
+}
+
+
+.admin-navs{
+  padding: 10px;
+  white-space: nowrap;
+}
+
+.admin-navs i{
+  color: #d4cfcf;
+  font-size: 30px;
+}
+
+ .Broke .sidebar-admin{
+  width: 75px !important;
+  }
+
+  .Broke .admin-navs a{
+   display: none;
+  }
 
 
 @media screen and (max-width:480px){
@@ -2117,11 +2334,18 @@ footer .socials-links i{
   }
 
   .testimonials-container{
-    max-width: 80%;
+    max-width: 70%;
     width: 100%;
     padding: 20px;
-    padding-left: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding-left: 4rem;
+
   }
+
+  
   .stats-container{
     padding-left: 2rem;
     display: grid;

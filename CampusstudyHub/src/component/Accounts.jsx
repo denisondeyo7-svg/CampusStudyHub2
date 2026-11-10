@@ -1,4 +1,4 @@
-
+import { Link} from 'react-router-dom'
 
 function Accounts() {
     return (
@@ -8,7 +8,7 @@ function Accounts() {
 
             <div className="account-container">
 
-                <button id="edit_profile">Edit Profile <i className="fas fa-edit"></i></button>
+                <Link to="/UpdateAccount" id="edit_profile">Edit Profile <i className="fas fa-edit"></i></Link>
                 <br /><br />
                 <div className="account-card">
                     <div className="details">

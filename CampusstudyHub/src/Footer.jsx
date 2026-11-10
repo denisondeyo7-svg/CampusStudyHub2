@@ -54,10 +54,22 @@ function Footer(){
                     </nav>
                 </div>
 
+                <div className="academics">
+                    <h2> Account</h2>
+
+                    <nav>
+                        <Link to="/Home">       Admin</Link>
+                        <Link to="/Accounts">      Account</Link>
+                        <Link to="/UpdateAccount">     Update</Link>
+                       
+                        
+                    </nav>
+                </div>
+
 
             </div><br />
             <div className="subfooter">
-                <small>©Campus Study Hub <br /> Developed By <a href="https://dentech-nu.vercel.app/">Denis</a></small>
+                <small>©Campus Study Hub <br /> Developed By <a href="https://denovatech.wuaze.com/">Denis</a></small>
             </div>
         </footer>
     )
