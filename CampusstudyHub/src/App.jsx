@@ -26,6 +26,7 @@ import AllNotes from './Admin/AllNotes'
 import AllAssessments from './Admin/AllAssessments.jsx'
 import Revision from './Admin/Revision.jsx'
 import AllNews from './Admin/AllNews'
+import AllDeadlines from './Admin/AllDeadlines'
 import Myaccount from './Admin/Myaccount'
 
 
@@ -116,11 +117,11 @@ function navs() {
 
         />
 
-        <Route path="/NewsManagement" element={
+        <Route path="/DeadlinesManagement" element={
 
           <>
 
-            <AllNews />
+            <AllDeadlines />
           </>
         }
 
