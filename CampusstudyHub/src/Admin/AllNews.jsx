@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import AdminSidebar from "../AdminSidebar";
 import AdminTop from "../component/AdminTop";
 import NewsComponent from "../component/NewsComponent";
@@ -16,7 +17,7 @@ function AllNews() {
                     <h3 className="pageTitle">Manage News</h3>
 
                 <div className="Addnotesbtn">
-                    <button id="Addnotesbtn"><i className="fas fa-plus"></i> Add News</button>
+                    <Link to="/AddNews" id="Addnotesbtn"><i className="fas fa-plus"></i> Add News</Link>
                 </div>
 
 

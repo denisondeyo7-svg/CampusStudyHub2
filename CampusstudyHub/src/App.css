@@ -223,6 +223,11 @@ button{
   cursor: pointer;
 }
 
+#addbtn{
+    padding: 10px;
+    background: #007bff;
+    border: none;
+  }
 #regbtn{
   cursor: pointer;
   text-decoration: none;
@@ -835,6 +840,8 @@ button{
   width: 90%;
 }
 
+
+#message,
 .box-content form #message{
   outline: none;
   border-radius: 5px;
@@ -1842,6 +1849,7 @@ footer .socials-links i{
 }
 
 .pageTitle{
+  padding: 10px;
   color: #007bff;
   border-bottom: 1px solid #007bff;
 }
@@ -1887,7 +1895,7 @@ th:nth-child(1){
   align-self: center;
   width: 90%;
   overflow-y: auto;
-   position: relative;
+  position: relative;
   height: 75vh;
 
 }
@@ -2074,6 +2082,8 @@ th:nth-child(1){
     border: 1px solid #999;
     color: #000;
   }
+
+  
 
   
 

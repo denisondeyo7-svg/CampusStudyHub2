@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom'
 import AdminSidebar from "../AdminSidebar";
 import AdminTop from "../component/AdminTop";
 import RevisionComponent from "../component/RevisionComponent";
@@ -16,7 +17,7 @@ function Revision() {
                     <h3 className="pageTitle">Manage PDFs</h3>
 
                 <div className="Addnotesbtn">
-                    <button id="Addnotesbtn"><i className="fas fa-plus"></i> Add PDF</button>
+                    <Link to="/AddRevisionPDFs"id="Addnotesbtn"><i className="fas fa-plus"></i> Add PDF</Link>
                 </div>
 
 

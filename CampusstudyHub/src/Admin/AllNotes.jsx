@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom'
 import AdminSidebar from "../AdminSidebar";
 import AdminTop from "../component/AdminTop";
 import NotesComponent from "../component/NotesComponent";
@@ -16,7 +17,7 @@ function AllNotes() {
                     <h3 className="pageTitle">Manage Notes</h3>
 
                 <div className="Addnotesbtn">
-                    <button id="Addnotesbtn"><i className="fas fa-plus"></i> Add Notes</button>
+                    <Link to="/AddNotes"id="Addnotesbtn"><i className="fas fa-plus"></i> Add Notes</Link>
                 </div>
 
 

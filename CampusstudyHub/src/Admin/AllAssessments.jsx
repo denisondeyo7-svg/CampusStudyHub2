@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom'
 import AdminSidebar from "../AdminSidebar";
 import AdminTop from "../component/AdminTop";
 import AssessmentComponent from "../component/AssessmentComponent";
@@ -17,7 +18,7 @@ function Assessments() {
                     <h3 className="pageTitle">Assessments</h3>
 
                 <div className="Addnotesbtn">
-                    <button id="Addnotesbtn"><i className="fas fa-plus"></i> Add New</button>
+                    <Link to="/Tests" id="Addnotesbtn"><i className="fas fa-plus"></i> Add New</Link>
                 </div>
 
 

@@ -28,9 +28,16 @@ import Revision from './Admin/Revision.jsx'
 import AllNews from './Admin/AllNews'
 import AllDeadlines from './Admin/AllDeadlines'
 import Myaccount from './Admin/Myaccount'
+import AddNotes from './Admin/AddNotes'
+import AddNews from './Admin/AddNews'
+import Test from './Admin/Test'
+import AddPDF from'./Admin/AddPDF'
+import AddDeadline from'./Admin/AddDeadline'
+
 
 
 import './App.css'
+
 
 
 function App() {
@@ -87,6 +94,13 @@ function navs() {
 
         />
 
+         <Route path="/AddNotes" element={
+            <AddNotes/>
+          }
+        
+
+        />
+
         <Route path="/AssessmentsTests" element={
 
           <>
@@ -94,6 +108,12 @@ function navs() {
             <AllAssessments />
           </>
         }
+
+        />
+        <Route path="/Tests" element={
+            <Test/>
+          }
+        
 
         />
 
@@ -106,7 +126,15 @@ function navs() {
         }
 
         />
+        <Route path="/AddRevisionPDFs" element={
 
+          <>
+
+            <AddPDF />
+          </>
+        }
+
+        />
         <Route path="/NewsManagement" element={
 
           <>
@@ -114,14 +142,31 @@ function navs() {
             <AllNews />
           </>
         }
+        />
+
+        <Route path="/AddNews" element={
+            <AddNews/>
+          }
+        
 
         />
+
+
 
         <Route path="/DeadlinesManagement" element={
 
           <>
 
             <AllDeadlines />
+          </>
+        }
+
+        />
+         <Route path="/AddDeadline" element={
+
+          <>
+
+            <AddDeadline />
           </>
         }
 
