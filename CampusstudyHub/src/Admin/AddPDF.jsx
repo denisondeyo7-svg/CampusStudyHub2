@@ -51,8 +51,8 @@ function AddPDF() {
                         <select name="year" id="year" required>
                             <option>Select Course</option>
 
-                            <option value="1">Information Technology</option>
-                            <option value="1">Computer Science</option>
+                            <option value="Information Technology">Information Technology</option>
+                            <option value="Computer Science">Computer Science</option>
 
                         </select>
 

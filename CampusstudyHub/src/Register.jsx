@@ -1,7 +1,36 @@
+import { useState } from "react";
 import Logo from "./assets/logo.png";
 import Heroimage from "./assets/heroes.jpg";
 import { Link } from "react-router-dom";
 function Register() {
+
+
+    const [message,setmessage]=useState("");
+
+    function registerAccount(e){
+        e.preventDefault();
+
+        const form = e.target;
+
+
+        fetch("http://localhost/CSHbackend/Register.php",{
+            method:post,
+            credentials:"include",
+
+            
+        })
+
+        .then(response=>response.json())
+
+
+        
+        then(data=>data(
+
+        ))
+
+
+    }
+
   return (
     <div className="form-img">
         <div className="formimage">
@@ -10,7 +39,7 @@ function Register() {
         <div className="login-form">
             
 
-            <form action="" method="post">
+            <form onSubmit={registerAccount} method="post">
                 <div className="login-logo">
                     <img src={Logo} alt="login logo" />
                 </div>
@@ -58,7 +87,7 @@ function Register() {
 
                 <div className="input">
                     <i className="fas fa-graduation-cap"></i>
-                    <select name="year" id="year" required>
+                    <select name="semister" id="year" required>
                     <option>Current Semister</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -69,7 +98,7 @@ function Register() {
 
                 <div className="input">
                 <i className="fas fa-list"></i>
-                <select name="year" id="year" required>
+                <select name="course" id="year" required>
                     <option>Select Course</option>
 
                     <option value="Information Technology">Information Technology</option>

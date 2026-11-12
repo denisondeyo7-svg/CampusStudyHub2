@@ -40,7 +40,7 @@ function AddDeadline() {
                             <option>Select Course</option>
 
                             <option value="Information Technology">Information Technology</option>
-                            <option value="1Computer Science">Computer Science</option>
+                            <option value="Computer Science">Computer Science</option>
 
                         </select>
 
