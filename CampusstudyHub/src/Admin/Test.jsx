@@ -1,64 +1,79 @@
 import Logo from '../assets/logo.png'
-
+import Heroimage from "../assets/hero1.png";
 function Test() {
     return (
-        <div className="login-form">
-            <div className="login-logo">
-                <img src={Logo} alt="login logo" />
+        <div className="form-img">
+            <div className="formimage">
+                <img src={Heroimage} alt="Hero image" />
             </div>
 
-            <form action="" method='post'>
-                <h2>Add Assessments <i className='fas fa-book'></i> </h2>
+            <div className="login-form">
 
+                <form action="" method='post'>
+                    <div className="login-logo">
+                        <img src={Logo} alt="login logo" />
+                    </div>
+
+                    <div className="form-title">
+                        <h2>Add Assessments <i className='fas fa-book'></i> </h2>
+                    </div>
+                    
+
+                    <div className="input">
+
+                        <input type="title" name='title1' id='password1' required />
+                        <label htmlFor="password1">Title</label>
+                    </div>
+                    <div className="progress">
                 <div className="input">
-
-                    <input type="file" name='pdf' id='newsimag' required />
-
-
-                </div>
-
-
-
-
-                <div className="input">
-
-                    <input type="title" name='title1' id='password1' required />
-                    <label htmlFor="password1">Title</label>
-                </div>
-
-                <div className="input">
-
+                 
                     <select name="year" id="year" required>
-                        <option>Select Year</option>
-                        <option value="1">1</option>
-                        <option value="1">2</option>
-                        <option value="1">3</option>
-                        <option value="1">4</option>
-
+                    <option>Select Year</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
                     </select>
-
-
                 </div>
 
                 <div className="input">
-
+                   
                     <select name="year" id="year" required>
-                        <option>Select Course</option>
-
-                        <option value="1">Information Technology</option>
-                        <option value="1">Computer Science</option>
-
+                    <option>Current Semister</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
                     </select>
-
-
+                </div>
                 </div>
 
+                    <div className="input">
+
+                        <select name="year" id="year" required>
+                            <option>Select Course</option>
+
+                            <option value="Information Technology">Information Technology</option>
+                            <option value="Computer Science<">Computer Science</option>
+
+                        </select>
 
 
-                <button id="addbtn">Add Assessment ?  </button>
+                    </div>
+                    
+                    <div className="input">
 
-            </form >
-        </div >
+                        <input type="file" name='pdf' id='newsimag' required />
+
+
+                    </div>
+
+
+
+                    <button id="addbtn">Add Assessment   </button>
+
+                </form >
+            </div >
+            </div>
     );
 }
 

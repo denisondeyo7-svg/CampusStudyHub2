@@ -28,7 +28,7 @@ function UpdateAccount() {
 
 
                     <div className="details">
-                        <i className="fas fa-graduation-cap"></i>
+                        <i className="fas fa-key"></i>
                         <div className="account-details">
                             <p>Passkey</p>
                             <small>********</small>

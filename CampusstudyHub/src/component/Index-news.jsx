@@ -1,3 +1,4 @@
+import {Link } from 'react-router-dom'
 import newsimg from '../assets/hero.png'
 function News(){
 
@@ -47,7 +48,7 @@ function News(){
                 
             </div>
         </div>
-            <button id='exploremore'>More News <i className='fas fa-arrow-right'></i></button>
+            <Link to="/News" id='exploremore'>More News <i className='fas fa-arrow-right'></i></Link>
         <br />
        </div>
        

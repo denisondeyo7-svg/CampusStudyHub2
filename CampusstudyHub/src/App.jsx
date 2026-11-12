@@ -19,7 +19,9 @@ import Account from './Account'
 import NotfoundPage from './Notfound.jsx'
 import Update from './Update'
 
+
 {/* Admin */ }
+
 import Dashboard from './Admin/Dashboard'
 import Members from './Admin/Members.jsx'
 import AllNotes from './Admin/AllNotes'
@@ -31,8 +33,10 @@ import Myaccount from './Admin/Myaccount'
 import AddNotes from './Admin/AddNotes'
 import AddNews from './Admin/AddNews'
 import Test from './Admin/Test'
-import AddPDF from'./Admin/AddPDF'
-import AddDeadline from'./Admin/AddDeadline'
+import AddPDF from './Admin/AddPDF'
+import AddDeadline from './Admin/AddDeadline'
+import EditAccount from './Admin/EditAccount'
+import AddTimetable from './Admin/AddTimetable'
 
 
 
@@ -94,10 +98,10 @@ function navs() {
 
         />
 
-         <Route path="/AddNotes" element={
-            <AddNotes/>
-          }
-        
+        <Route path="/AddNotes" element={
+          <AddNotes />
+        }
+
 
         />
 
@@ -111,9 +115,9 @@ function navs() {
 
         />
         <Route path="/Tests" element={
-            <Test/>
-          }
-        
+          <Test />
+        }
+
 
         />
 
@@ -145,9 +149,9 @@ function navs() {
         />
 
         <Route path="/AddNews" element={
-            <AddNews/>
-          }
-        
+          <AddNews />
+        }
+
 
         />
 
@@ -162,7 +166,7 @@ function navs() {
         }
 
         />
-         <Route path="/AddDeadline" element={
+        <Route path="/AddDeadline" element={
 
           <>
 
@@ -180,6 +184,17 @@ function navs() {
         }
 
         />
+
+        <Route path="/Edit" element={
+
+          <>
+
+            <EditAccount />
+          </>
+        }
+
+        />
+
 
 
 
@@ -203,6 +218,14 @@ function navs() {
           <>
 
             <Register />
+
+          </>
+        } />
+         <Route path="/AddTimetable" element={
+          <>
+            
+            <AddTimetable />
+           
 
           </>
         } />
@@ -283,6 +306,8 @@ function navs() {
 
           </>
         } />
+
+       
 
         <Route path="/Deadlines" element={
           <>
