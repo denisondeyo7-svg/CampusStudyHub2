@@ -7,26 +7,35 @@ function Register() {
 
     const [message,setmessage]=useState("");
 
-    function registerAccount(e){
-        e.preventDefault();
+    function registerAccount(event){
+        event.preventDefault();
 
-        const form = e.target;
+        const form = event.target;
 
 
         fetch("http://localhost/CSHbackend/Register.php",{
-            method:post,
+            method:'post',
             credentials:"include",
+            body: new FormData(form),
 
             
         })
 
         .then(response=>response.json())
-
-
         
-        then(data=>data(
+        then(data=>{
+            if(data.success){
+                console.log('welcome');
+            }
 
-        ))
+            else{
+                setmessage(data.message);
+            }
+        })
+
+        .catch(error=>{
+            console.log("error",error);
+        })
 
 
     }
@@ -44,6 +53,7 @@ function Register() {
                     <img src={Logo} alt="login logo" />
                 </div>
                 <div className="form-title">
+                    {message && <p>{message}</p> }
                     <h2>
                     Account Creation <i className="fas fa-gear"></i>{" "}
                     </h2>
