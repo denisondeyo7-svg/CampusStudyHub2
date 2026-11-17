@@ -1618,7 +1618,7 @@ button{
 }
 
 .login-form form{
-  padding: 15px;
+  padding: 17px;
   min-width: 30%;
   width: 20rem;
   display: flex;
@@ -1664,12 +1664,15 @@ legend{
   padding:10px;
   background: goldenrod;
 }
+
+#course,
+#semister,
 #year,
 .login-form form .input{
   width: 100%;
   display: flex;
+  gap: 10px;
   align-items: center;
-  gap: 12px;
   position: relative;
 }
 .login-form form .input i{
@@ -1685,6 +1688,20 @@ legend{
   transition: .3s ease;
 }
 
+.messages{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  color: #f00;
+  background: rgba(255, 0, 0, 0.164);
+  width: 80%;
+  align-self: center;
+
+
+}
+#course,
+#semister,
 #year,
 .login-form form .input input{
   width: 100%;

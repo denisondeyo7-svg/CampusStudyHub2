@@ -1,6 +1,27 @@
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import {Link} from "react-router-dom"
 function Avatar() {
+
+    const navigate =useNavigate();
+
+    function logout(){
+        fetch("http://localhost/CSHbackend/Logout.php",{
+            method:"post",
+            Credentials:"include",
+        })
+
+        .then(response => response.json())
+        .then(data => {
+            if(data.loggedout) {
+                navigate("/Login");
+            }
+            
+        })
+        .catch(error => {
+            console.log("Logout error:", error);
+        });
+    }
 
     const [Isopen ,setIsopen]=useState(false);
 
@@ -13,8 +34,8 @@ function Avatar() {
                     <div className="user">
                         <Link to="/Accounts"><i className="fa-regular fa-user" onClick={()=> setIsopen(false)}></i>Account</Link>
                     </div>
-                    <div className="logoutbtn">
-                        <a href=""><i className="fas fa-power-off" onClick={()=> setIsopen(false)}></i>Logout</a>
+                    <div className="logoutbtn" title="Logout">
+                        <a onClick={logout}><i className="fas fa-power-off" onClick={()=> setIsopen(false)}></i>Logout</a>
                     </div>
                 </div>
             )}

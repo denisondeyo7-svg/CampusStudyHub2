@@ -2,11 +2,36 @@ import SidebarLogo from "./assets/logo.png"
 import image1 from "./assets/ETn3AAsFMkPA_-NciUOrnhcb6C-E_uqZOe2bF4ZaIYYsyliyaybpDFS9gJUI8Vkmg2SxEZCqzVeSZGBihqD5ya1BSovfZNFfbfK8BnOxmgL-8QXetk7vCLgJMXt9Tci_MF4nVl-2TDl1G8nmWM3XPrBu3ZdxMl8jigkseFkis_AHQVmFHNX6fa.jpg"
 import image2 from "./assets/Ej5aH_TB3yBICdOTnC0EK-9Q9XVb-_ok-8apZ4Lsr_PLRcKSz65RPUm8A-YH-3xaSkCtPi1Lv-mcUEfE_IimiKG0Zdz3EkuWaZ-w4tritlzy2RZ7p51_5Kl3-vPKLH6Ev_V3HevCsujoHMrDneoB0D2iTT108I5HOHf4qAdVNNvw57Eckd17Wc.jpg"
 import image3 from "./assets/logo.png"
-import { useState } from "react"
 import Avatar from './component/Avatar'
+import { useState,useEffect } from "react"
 
 
 function LandingPage (){
+    const [username,setUsername]=useState("");
+
+    useEffect(() => {
+        fetch("http://localhost/CSHbackend/Login.php", {
+            credentials: "include",
+            method:"post",
+
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Session not found");
+            }
+
+            return response.json();
+        })
+        .then(data => {
+            setUsername(data.username);
+        })
+        .catch(error => {
+            console.log("Session error:", error);
+        });
+    }, []);
+
+
+
 
     const[open,setopenbox]=useState(false);
 
@@ -99,7 +124,7 @@ function LandingPage (){
                 <br />
                 <div className="welcome-card">
                         
-                    <h2>Welcome back Denis</h2>
+                    <h2>Welcome back {username &&{username}}</h2>
                     
                     <p>Access all your notes, revision papers, and campus news while staying on track with your timetable and deadlines.</p>
                 </div>
