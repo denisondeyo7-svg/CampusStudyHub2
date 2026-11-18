@@ -1,9 +1,32 @@
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import {Link} from "react-router-dom"
 function Avatar() {
 
+    const [myavatar, setavatar]=useState("");
+
     const navigate =useNavigate();
+
+    useEffect(()=>{
+        fetch("http://localhost/CSHbackend/Avatar.php",{
+            credentials:"include",
+        })
+
+        .then(response => response.json())
+        .then(data=>{
+            if(data.set){
+                setavatar(data.firstletter);
+            }
+        })
+
+        .catch(error =>{
+            console("Error:",error);
+        })
+
+
+
+    },[])
+
 
     function logout(){
         fetch("http://localhost/CSHbackend/Logout.php",{
@@ -18,6 +41,7 @@ function Avatar() {
             }
             
         })
+
         .catch(error => {
             console.log("Logout error:", error);
         });
@@ -27,7 +51,7 @@ function Avatar() {
 
     return (
         <div className="logout" title="Account">
-            <a onClick={()=> setIsopen(!Isopen)} id="logoutbtn">D<i className={Isopen? "fas fa-angle-up":"fas fa-angle-down"}></i></a>
+            <a onClick={()=> setIsopen(!Isopen)} id="logoutbtn">{myavatar && <h2>{myavatar}</h2> }<i className={Isopen? "fas fa-angle-up":"fas fa-angle-down"}></i></a>
 
             {(Isopen &&
                 <div className="profile-box">

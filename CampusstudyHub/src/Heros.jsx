@@ -6,14 +6,16 @@ import Avatar from './component/Avatar'
 import { useState,useEffect } from "react"
 
 
+
 function LandingPage (){
-    const [username,setUsername]=useState("");
+
+   
+
+    const [User,setUser] = useState("");
 
     useEffect(() => {
-        fetch("http://localhost/CSHbackend/Login.php", {
-            credentials: "include",
-            method:"post",
-
+        fetch("http://localhost/CSHbackend/checksession.php", {
+            credentials: "include"
         })
         .then(response => {
             if (!response.ok) {
@@ -23,13 +25,12 @@ function LandingPage (){
             return response.json();
         })
         .then(data => {
-            setUsername(data.username);
+            setUser(data.username);
         })
         .catch(error => {
             console.log("Session error:", error);
         });
     }, []);
-
 
 
 
@@ -124,7 +125,7 @@ function LandingPage (){
                 <br />
                 <div className="welcome-card">
                         
-                    <h2>Welcome back {username &&{username}}</h2>
+                    <h2>Hello {User} !</h2>
                     
                     <p>Access all your notes, revision papers, and campus news while staying on track with your timetable and deadlines.</p>
                 </div>

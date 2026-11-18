@@ -511,7 +511,9 @@ button{
   box-shadow:  0 0 4px #999;
 }
 #logoutbtn{
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   color: #00f;
   font-size: 16px;
