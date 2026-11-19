@@ -1,6 +1,35 @@
-
+import { useState } from "react";
 function Contact(){
 
+    const[ alert ,setalert]=useState('');
+
+    function sendmessage(event){
+        event.preventDefault();
+
+        const form = event.target;
+
+        fetch("http://localhost/CSHbackend/Sendmessage.php",{
+            method:"post",
+            credentials:"include",
+            body: new FormData(form),
+        })
+
+        .then(Response => Response.json())
+        .then(data =>{
+            if(data.success){
+                setalert(data.message);
+            }
+            else{
+                setalert(data.message);
+            }
+        })
+
+        .catch(error => {
+            console.log("Error:",error);
+        })
+    }
+
+    
     return(
         <div className="index-contact">
             <br /><br /><br />
@@ -32,7 +61,11 @@ function Contact(){
                     </div>
 
                     <div className="card2">
-                        <form action="" method="post">
+                        <form onSubmit={sendmessage}>
+                            <>
+                                {alert && <p className="alert">{alert}<i className="fas fa-xmark"></i></p> }
+                                
+                            </>
                             <h2>Message us</h2>
 
                             <div className="input">

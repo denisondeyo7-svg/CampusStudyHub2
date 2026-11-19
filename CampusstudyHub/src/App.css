@@ -1201,9 +1201,9 @@ button{
 
 }
 
-.stats .label i{
+.stats  i{
   color: goldenrod;
-  font-size: 26px;
+  font-size: 30px;
 }
 
 
@@ -1688,6 +1688,31 @@ legend{
   margin-left: 42px;
   top: 10px;
   transition: .3s ease;
+}
+
+
+.alert{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  background: goldenrod;
+  border-radius: 8px;
+
+}
+
+.alert i{
+  font-size: 20px;
+  color: #fff;
+  padding: 8px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  transition: .3s ease;
+}
+
+.alert i:hover{
+  background: #fff;
+  color: goldenrod;
 }
 
 .messages{

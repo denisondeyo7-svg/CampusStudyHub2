@@ -32,6 +32,24 @@ function LandingPage (){
         });
     }, []);
 
+    const [total ,settotal]=useState([]);
+    useEffect(()=>{
+        fetch("http://localhost/CSHbackend/Allmembers.php",{
+            method:"GET",
+            credentials:"include",
+        })
+        .then(response=>response.json())
+        .then(data=>{
+            if(data.success){
+                settotal(data.result);
+            }
+        })
+
+        .catch(error => {
+            console.log("total error:",error);
+        });
+    },[]);
+
 
 
     const[open,setopenbox]=useState(false);
@@ -55,7 +73,7 @@ function LandingPage (){
     ]
 
     const stats=[
-        {number:"1", limit:"10+" ,name:"Members",i:"fas fa-user-graduate"},
+        {number:"1", limit:total ,name:"Members",i:"fas fa-user-graduate"},
         {number:"2", limit:"15+" ,name:"Notes",i:"fas fa-graduation-cap"},
         {number:"3", limit:"17+" ,name:"PDFs",i:"fas fa-layer-group"},
         {number:"4", limit:"7+" ,name:"Assessments",i:"fa-regular fa-file"}
@@ -201,10 +219,10 @@ function LandingPage (){
                 <div className="stats-container">
                     {stats.map((stat)=>(
                         <div className="stats-card"key={stat.number}>
-                            <h2>{stat.limit}</h2>
+                            <h2><i className={stat.i}></i></h2>
                             <div className="label">
                                 <small>{stat.name}</small>
-                                <i className={stat.i}></i>
+                                <p>{stat.limit}</p>
                             </div>
 
                         </div>
