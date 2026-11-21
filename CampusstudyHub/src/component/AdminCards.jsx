@@ -18,10 +18,28 @@ function AdminCards() {
         });
     },[]);
 
+    const [administrator ,setadmin]=useState("");
+    useEffect(()=>{
+        fetch("http://localhost/CSHbackend/Admins.php",{
+            method:"GET",
+            credentials:"include",
+        })
+        .then(response=>response.json())
+        .then(data=>{
+            if(data.isadmin){
+                setadmin(data.role);
+            }
+        })
+
+        .catch(error => {
+            console.log("total error:",error);
+        });
+    },[]);
+
     const cards =[
         {no:"1",title:"Members",number:total, i:"fas fa-users"},
         {no:"2",title:"Messages",number:"10+", i:"fas fa-reply"},
-        {no:"3",title:"Admins",number:"10+", i:"fas fa-shield"},
+        {no:"3",title:"Admins",number:administrator, i:"fas fa-shield"},
         {no:"4",title:"Notes",number:"30+", i:"fas fa-book"},
         {no:"5",title:"PDFs",number:"10+", i:"fas fa-graduation-cap"},
         {no:"6",title:"Tests",number:"10+", i:"fas fa-layer-group"},

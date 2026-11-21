@@ -5,7 +5,7 @@ import image3 from "./assets/hero.png"
 
 function About(){
     const AboutContents= [
-        {number:"1" ,small:"Hear from us" ,h1:"About Us",Content:"At Campus Study Hub, we ensure that you never miss an important deadline. Stay informed with the latest campus news and updates, access your academic timetables, and find revision PDFs and study notes to support your learning journey. We're delighted to have you here.",lowerContent:"Campus Study Hub — your partner in academic success!"},
+        {number:"1" ,small:"Hear from us" ,h1:"From Us",Content:"At Campus Study Hub, we ensure that you never miss an important deadline. Stay informed with the latest campus news and updates, access your academic timetables, and find revision PDFs and study notes to support your learning journey. We're delighted to have you here.",lowerContent:"Campus Study Hub — your partner in academic success!"},
     ] 
     
     const AboutContent1= [

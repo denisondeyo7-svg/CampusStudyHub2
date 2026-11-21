@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import AdminSidebar from "../AdminSidebar";
 import AdminTop from "../component/AdminTop";
 import NewsComponent from "../component/NewsComponent";
+
 function AllNews() {
     return (
         <div className="admin-dashboard">

@@ -22,9 +22,10 @@ function IndexPage(){
                     
 
                     <div className="texts">
-                        <h1 className='headline'><span className='den'>Campus</span> Study Hub</h1>
+                        <h1 className='headline'>Campus Study <span className='den'>Hub</span></h1>
                         <h1>Your partner in academic success !</h1>
-                        <small className='theme'>Never miss an important deadline. Stay informed with the latest campus news and updates, access your academic timetables, and find revision PDFs and study notes to support your learning journey. We're delighted to have you here.</small>
+                        <small className='theme'>Never miss an important deadline. Stay informed with the latest campus news and updates, access your academic timetables, and find revision PDFs and study notes to support your learning journey. We're delighted to have you here. </small><br />
+                        <small className='theme'>Computer Science & IT</small>
 
                         <br />
                         <div className="btn">

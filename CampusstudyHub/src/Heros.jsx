@@ -4,6 +4,7 @@ import image2 from "./assets/Ej5aH_TB3yBICdOTnC0EK-9Q9XVb-_ok-8apZ4Lsr_PLRcKSz65
 import image3 from "./assets/logo.png"
 import Avatar from './component/Avatar'
 import { useState,useEffect } from "react"
+import { Link } from "react-router-dom"
 
 
 
@@ -54,10 +55,65 @@ function LandingPage (){
 
     const[open,setopenbox]=useState(false);
 
+    const[ message,setmessage] = useState("");
+    const[ dmessage,setdmessage] = useState("");
+    const [mynews,setnews]= useState([])
+    
+    useEffect(()=>{
+        fetch("http://localhost/CSHbackend/indexNews.php",{
+
+            method:"GET",
+            credentials:"include",
+
+        })
+        .then(response => response.json())
+        .then(content =>{
+            if(content.success){
+                setnews(content.data);
+            }
+            else{
+                setmessage(content.message);
+            }
+        })
+        .catch(error=>{
+            console.log("Error:",error);
+            
+        })
+
+    },[])
+
+
+    const [deadlines,setdeadline]=useState([]);
+    
+
+    useEffect(()=>{
+        fetch("http://localhost/CSHbackend/Indexdeadline.php",{
+
+            method:"GET",
+            credentials:"include",
+
+        })
+        .then(response => response.json())
+        .then(deadlinecontent =>{
+            if(deadlinecontent.success){
+                setdeadline(deadlinecontent.data);
+            }
+            else{
+                setdeadline(deadlinecontent.message);
+            }
+        })
+        .catch(error=>{
+            console.log("Error:",error);
+            setdmessage("Something went wrong")
+            
+        })
+
+    },[])
+
     const boxes=[
         {number:"1",boxTitle:"Today's Class",boxContent:"Timetable for today goes here"},
-        {number:"2",boxTitle:"Deadlines", boxContent:"Deadlines goes here limit 4"},
-        {number:"3",boxTitle:"News & Events",boxContent:"News and events goes here limit 4"},
+        
+        
     ];
 
 
@@ -154,9 +210,53 @@ function LandingPage (){
                             <div className="title">
                                 <h2>{box.boxTitle}</h2>
                             </div>
-                            <p>{box.boxContent}</p>
+                            <p>lorem</p>
                         </div>
                     ))}
+
+
+                        <div className="card" id="deadlinecard">
+                            {message}
+                            <div className="title">
+                                <h2>Deadlines</h2>
+                            </div>
+                            <ol>
+                    {deadlines.map((deadline)=>(
+                            <>
+                                
+                                    <li><p key={deadline.id}>{deadline.content}</p></li>
+                                
+
+                            </>
+                    ))}
+                        <Link to="/Deadlines" id="moredeadlines">Read More Deadlines</Link>
+                    </ol>
+                        </div>
+
+
+                    
+                        <div className="card" id="news-card">
+                            <div className="title">
+                                <h2>News & Updates</h2>
+                            </div>
+                           {mynews.map((news)=>(
+                                <div className="card-news-container">
+                                    
+                                    <div className="img">
+                                        <img src={`http://localhost/CSHbackend/News/${news.file}`} alt="News Image" />
+                                    </div>
+
+                                    <div className="news-content">
+                                        <p>{news.description}</p>
+                                    </div>
+
+                                </div>
+
+                           ))}   
+                        </div>
+                    
+
+                    
 
                     
                 </div>

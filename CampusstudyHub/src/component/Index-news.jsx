@@ -1,7 +1,33 @@
 import {Link } from 'react-router-dom'
-import newsimg from '../assets/hero.png'
+import { useState,useEffect } from 'react'
 function News(){
 
+        const [mynews,setnews]= useState([]);
+    
+    useEffect(()=>{
+        fetch("http://localhost/CSHbackend/IndexNews.php",{
+
+            method:"GET",
+            credentials:"include",
+
+        })
+        .then(response => response.json())
+        .then(content =>{
+            if(content.success){
+                setnews(content.data);
+            }
+            else{
+                setmessage(content.message);
+            }
+        })
+        .catch(error=>{
+            console.log("Error:",error);
+            
+        })
+
+    },[])
+
+    
     return(
        <div className="news">
         <br /><br /><br />
@@ -9,41 +35,18 @@ function News(){
 
         <div className="news-container">
             <div className="news-card-container">
-                <div className="news-card">
-                    <div className="img">
-                        <img src={newsimg} alt="News Img" />
-                    </div>
-                    <div className="news-content">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, dolorum voluptates!</p>
-                    </div>
-                </div>
+                {mynews.map((news)=>(
 
-                <div className="news-card">
-                    <div className="img">
-                        <img src={newsimg} alt="News Img" />
+                    <div className="news-card"key={news.id}>
+                        <div className="img">
+                            <img src={`http://localhost/CSHbackend/News/${news.file}`} alt="News Image" />
+                        </div>
+                        <div className="news-content">
+                            <p>{news.description}</p>
+                        </div>
                     </div>
-                    <div className="news-content">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, dolorum voluptates!</p>
-                    </div>
-                </div>
 
-                <div className="news-card">
-                    <div className="img">
-                        <img src={newsimg} alt="News Img" />
-                    </div>
-                    <div className="news-content">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, dolorum voluptates!</p>
-                    </div>
-                </div>
-
-                <div className="news-card">
-                    <div className="img">
-                        <img src={newsimg} alt="News Img" />
-                    </div>
-                    <div className="news-content">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, dolorum voluptates!</p>
-                    </div>
-                </div>
+                ))}
 
                 
             </div>

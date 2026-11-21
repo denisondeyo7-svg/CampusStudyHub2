@@ -930,7 +930,45 @@ button{
 .card{
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 32px !important;
+  
+}
+#moredeadlines{
+  color: #00f;
+}
+#deadlinecard,
+#news-card{
+  height: auto !important;
+}
+.card-news-container{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  min-height: 50%;
+}
+
+.card-news-container .img{
+  position: relative;
+  width: 100%;
+  min-height: 22rem;
+  height: 22rem;
+  overflow: hidden;
+}
+
+.news-content{
+  width: 100%;
+}
+
+.card-news-container .img img{
+  min-height: 22rem;
+  height: 22rem;
+  width: 100%;
+  object-fit: cover;
+}
+.card .img{
+  width: 100%;
+  height: 100%;
 }
 
 .th1{
@@ -1493,6 +1531,7 @@ button{
 .news-card .img{
   width: 100%;
   height: 300px;
+  border: 1px solid #555;
   overflow: hidden;
 
 }
@@ -1592,6 +1631,8 @@ button{
   width: 100%;
   object-fit: cover;
 }
+
+
 .login-form{
   background: #fff;
   display: flex;
@@ -1604,6 +1645,7 @@ button{
   height: auto;
 
 }
+
 
 .login-form .login-logo{
   display: flex;
@@ -2026,7 +2068,7 @@ th:nth-child(1){
   align-items: center;
   gap: 22px;
   justify-content: center;
-  width: 12rem;
+  width: 8rem;
   padding: 22px;
   box-shadow:  0 0 3px #999;
   height: 100px;
@@ -2068,7 +2110,7 @@ th:nth-child(1){
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 60%;
+  width: 90%;
 }
 
 .admin-card i{

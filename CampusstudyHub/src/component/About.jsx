@@ -10,7 +10,7 @@ function About(){
         <div className="about-section">
            
             <br /><br /><br /><br />
-            <h1><span className="dams">Abo</span>ut us</h1>
+            <h1>About <span className="dams">Us</span></h1>
                
             <div className="about-content-wrapper">
                 

@@ -1,23 +1,46 @@
-
+import { useState ,useEffect } from "react";
 
 function DeadlineComponent() {
-    const notes = [
-        { number: "1", Title: "Kindly remember to register for all courses by friday" },
-        { number: "2", Title: "Kindly remember to register for all courses by friday" },
+    const [deadlines,setdeadline]=useState([]);
+    const [message,setmessage]=useState("");
 
+    useEffect(()=>{
+        fetch("http://localhost/CSHbackend/Deadlines.php",{
 
-    ]
+            method:"GET",
+            credentials:"include",
+
+        })
+        .then(response => response.json())
+        .then(content =>{
+            if(content.success){
+                setdeadline(content.data);
+            }
+            else{
+                setdeadline(content.message);
+            }
+        })
+        .catch(error=>{
+            console.log("Error:",error);
+            
+        })
+
+    },[])
+
+    
+    
     return (
         <div className="notes">
 
 
             <div className="notes-wrapper">
+                {message}
 
-                {notes.map((note) => (
-                    <div className="notes-card" key={note.number}>
-                        <ol>
-                            <li>{note.Title}</li>
-                        </ol>
+                {deadlines.map((deadline) => (
+                    <div className="notes-card" key={deadline.id}>
+                        <ul>
+                            <li>{deadline.content}</li>
+                        </ul>
                         <div className="buttons">
                             <a href="">Delete <i className="fas fa-trash"></i></a>
                             <a href="">Edit <i className="fas fa-edit"></i></a>
