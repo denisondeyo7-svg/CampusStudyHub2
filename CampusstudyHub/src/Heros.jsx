@@ -240,7 +240,7 @@ function LandingPage (){
                                 <h2>News & Updates</h2>
                             </div>
                            {mynews.map((news)=>(
-                                <div className="card-news-container">
+                                <div className="card-news-container"key={news.news_id}>
                                     
                                     <div className="img">
                                         <img src={`http://localhost/CSHbackend/News/${news.file}`} alt="News Image" />

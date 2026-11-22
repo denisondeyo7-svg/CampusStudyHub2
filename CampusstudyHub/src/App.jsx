@@ -18,7 +18,7 @@ import PasswordReset from './PassReset'
 import Account from './Account'
 import NotfoundPage from './Notfound.jsx'
 import Update from './Update'
-
+import Protected from './Protected'
 
 {/* Admin */ }
 
@@ -253,101 +253,30 @@ function navs() {
             <Footer />
           </>
         } />
-        <Route path="/Dashboard" element={
+
+      {/*Protected routes*/}
+
+        <Route element={<Protected />}>
+        
+          <Route path="/Dashboard" element={
           <>
+
             <Navbar />
             <LandingPage />
             <Footer />
-
           </>
         } />
-
-        <Route path="/Timetable" element={
-          <>
-            <Navbar />
-            <Timetable />
-            <Footer />
-
-          </>
-        } />
-
-        <Route path="/Notes" element={
-          <>
-            <Navbar />
-            <Notes />
-
-            <Footer />
-          </>
-        } />
-
-        <Route path="/Assessments" element={
-          <>
-            <Navbar />
-            <Assessments />
-            <Footer />
-
-          </>
-        } />
-
-        <Route path="/RevisionPapers" element={
-          <>
-            <Navbar />
-            <Revisionpapers />
-            <Footer />
-
-          </>
-        } />
-
-        <Route path="/News" element={
-          <>
-            <Navbar />
-            <News />
-            <Footer />
-
-          </>
-        } />
-
-       
-
-        <Route path="/Deadlines" element={
-          <>
-            <Navbar />
-            <Deadlines />
-            <Footer />
-
-          </>
-        } />
-
-        <Route path="/About" element={
-          <>
-            <Navbar />
-            <About />
-            <Footer />
-
-          </>
-        } />
-
-        <Route path="/Testimonials" element={
-          <>
-            <Navbar />
-            <Testimonial />
-            <Footer />
-
-          </>
-        } />
-
-        <Route path="/Contact" element={
-          <>
-            <Navbar />
-            <Contact />
-            <Footer />
-
-          </>
-        } />
-
-      </Routes>
-
-
+          <Route path="/Timetable" element={<Timetable />} />
+          <Route path="/Notes" element={<Notes />} />
+          <Route path="/Assessments" element={<Assessments />} />
+          <Route path="/RevisionPapers" element={<Revisionpapers />} />
+          <Route path="/News" element={<News />} />
+          <Route path="/Deadlines" element={<Deadlines />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/Testimonials" element={<Testimonial />} />
+          <Route path="/Contact" element={<Contact />} />
+        </Route>
+     </Routes>
     </BrowserRouter>
   )
 }

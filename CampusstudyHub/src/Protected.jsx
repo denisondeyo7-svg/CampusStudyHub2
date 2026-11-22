@@ -1,34 +1,43 @@
-import { Navigate, Outlet } from "react-router-dom";
+import { Navigate, Outlet, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 function Protected() {
+  const [authenticated, setAuthenticated] = useState(null);
+  const location = useLocation();
 
-    const [authenticated, setAuthenticated] = useState(null);
+  useEffect(() => {
+    const controller = new AbortController();
 
-    useEffect(() => {
+    fetch("http://localhost/CSHbackend/checksession.php", {
+      credentials: "include",
+      signal: controller.signal,
+    })
+      .then((response) => {
+        if (!response.ok) throw new Error("Session check failed");
+        return response.json();
+      })
+      .then((data) => {
+        setAuthenticated(Boolean(data.success));
+      })
+      .catch((error) => {
+        if (error.name !== "AbortError") {
+          console.error("Session error:", error);
+          setAuthenticated(false);
+        }
+      });
 
-        fetch("http://localhost/CSHbackend/checksession.php", {
-            credentials: "include"
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log("Session response:", data);
-            setAuthenticated(data.success);
-        })
-        .catch(error => {
-            console.log("Session error:", error);
-            setAuthenticated(false);
-        });
+    return () => controller.abort();
+  }, []);
 
-    }, []);
+  if (authenticated === null) {
+    return <p>Checking session...</p>;
+  }
 
-    if (authenticated === null) {
-        return <p>Checking session...</p>;
-    }
-
-    return authenticated
-        ? <Outlet />
-        : <Navigate to="/Login" replace />;
+  return authenticated ? (
+    <Outlet />
+  ) : (
+    <Navigate to="/Login" state={{ from: location }} replace />
+  );
 }
 
 export default Protected;

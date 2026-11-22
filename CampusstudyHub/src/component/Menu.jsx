@@ -1,5 +1,6 @@
 import { useState } from "react"
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
+
 
 function Menu(){
 
@@ -16,7 +17,9 @@ function Menu(){
                     <a href="#about" onClick={()=> SetOpen(false)}>About</a>
                     <a href="#news" onClick={()=> SetOpen(false)}>News & Updates</a>
                     <a href="#contact" onClick={()=> SetOpen(false)}>Contact</a>
-
+                    <Link to="/Login" onClick={()=> SetOpen(false)}>Student's Page</Link>
+                    
+ 
                     <div className="call2actions">
                         <Link to="/Login" id='myloginbtn'>Login</Link>
                         <Link to="/Register" id='myregbtn'>Get started</Link>
