@@ -1,6 +1,39 @@
 import Logo from '../assets/logo.png'
 import Heroimage from "../assets/hero1.png";
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 function AddNotes() {
+
+    const navigate = useNavigate();
+    const [message,setmessage]=useState("");
+
+    function upload(event){
+        event.preventDefault();
+
+        const form =event.target;
+
+        fetch("http://localhost/CSHbackend/AddNotes.php",{
+            method:"POST",
+            credentials:"include",
+            body:new FormData(form),
+        })
+
+        .then(response => response.json())
+        .then(data =>{
+            if(data.success){
+                navigate("/NotesManagement")
+            }
+            else{
+                setmessage(data.success);
+            }
+        })
+
+        .catch(error =>{
+            console.log("Error:",error);
+            setmessage("Something went wrong please try again");
+        })
+    }
     return (
         <div className="form-img">
             <div className="formimage">
@@ -8,19 +41,21 @@ function AddNotes() {
                 </div>
             <div className="login-form">
 
-                <form action="" method='post'>
+                <form onSubmit={upload}>
                     <div className="login-logo">
                         <img src={Logo} alt="login logo" />
                     </div>
                     <div className="form-title">
                         <h2>Add Notes <i className='fas fa-book'></i> </h2>
                     </div>
+
+                    {message &&<p className="messages">{message}</p> }
                     
 
                     
                     <div className="input">
 
-                        <input type="title" name='title1' id='password1' required />
+                        <input type="text" name='title1' id='password1' required />
                         <label htmlFor="password1">Title</label>
                     </div>
 
@@ -38,7 +73,7 @@ function AddNotes() {
 
                 <div className="input">
                    
-                    <select name="year" id="year" required>
+                    <select name="semister" id="year" required>
                     <option>Current Semister</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -48,7 +83,7 @@ function AddNotes() {
                 </div>
                     <div className="input">
 
-                        <select name="year" id="year" required>
+                        <select name="course" id="year" required>
                             <option>Select Course</option>
 
                             <option value="Information Technology">Information Technology</option>

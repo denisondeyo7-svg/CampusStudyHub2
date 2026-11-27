@@ -15,7 +15,7 @@ function Assessments() {
 <br />
                 
                 <div className="Members-container">
-                    <h3 className="pageTitle">Assessments</h3>
+                    <h3 className="pageTitle">CATs</h3>
 
                 <div className="Addnotesbtn">
                     <Link to="/Tests" id="Addnotesbtn"><i className="fas fa-plus"></i> Add New</Link>

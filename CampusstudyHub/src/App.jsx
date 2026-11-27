@@ -266,15 +266,78 @@ function navs() {
             <Footer />
           </>
         } />
-          <Route path="/Timetable" element={<Timetable />} />
-          <Route path="/Notes" element={<Notes />} />
-          <Route path="/Assessments" element={<Assessments />} />
-          <Route path="/RevisionPapers" element={<Revisionpapers />} />
-          <Route path="/News" element={<News />} />
-          <Route path="/Deadlines" element={<Deadlines />} />
-          <Route path="/About" element={<About />} />
-          <Route path="/Testimonials" element={<Testimonial />} />
-          <Route path="/Contact" element={<Contact />} />
+          <Route path="/Timetable" element={
+            <>
+              <Navbar />
+              <Timetable />
+              <br /><br />
+              <Footer />
+              </>
+            } />
+          <Route path="/Notes" element={
+            <>
+              <Navbar />
+              <Notes />
+              <br /><br />
+              <Footer />
+            </>
+            } />
+          <Route path="/Assessments" element={
+            <>
+              <Navbar />
+              <Assessments />
+              <br /><br />
+              <Footer />
+            </>
+            } />
+          <Route path="/RevisionPapers" element={
+            <>
+              <Navbar />
+              <Revisionpapers />
+              <br /><br />
+              <Footer />
+            </>
+            } />
+          <Route path="/News" element={
+            <>
+              <Navbar />
+              <News />
+              <br /><br />
+              <Footer />
+            </>
+            } />
+          <Route path="/Deadlines" element={
+            <>
+              <Navbar />
+              <Deadlines />
+              <br /><br />
+              <Footer />
+            </>
+            } />
+          <Route path="/About" element={
+            <>
+              <Navbar />
+              <About />
+              <br /><br />
+              <Footer />
+            </>
+            } />
+          <Route path="/Testimonials" element={
+            <>
+              <Navbar />
+              <Testimonial />
+              <br /><br />
+              <Footer />
+            </>
+            } />
+          <Route path="/Contact" element={
+            <>
+              <Navbar />
+              <Contact />
+              <br /><br />
+              <Footer />
+            </>
+            } />
         </Route>
      </Routes>
     </BrowserRouter>

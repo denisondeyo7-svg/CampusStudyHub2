@@ -1,27 +1,51 @@
-
+import { useState,useEffect } from "react"
 function Revisionpapers(){
 
-    const PDFS = [
-        {number:"1", Title:"Object Oriented Programming 1"},
-        {number:"2", Title:"System Design & Architecture"},
-        {number:"3", Title:"Introduction To Databases"},
+    const [files,setfile]=useState([]);
+            const [messages,setmessages]=useState("");
         
-    ]
+            useEffect(()=>{
+                fetch("http://localhost/CSHbackend/Pdfs.php",{
+        
+                })
+                .then(response => response.json())
+                .then(results =>{
+                    if(results.success){
+                        setfile(results.data);
+                    }
+                    else{
+                        setmessages(results.message);
+                    }
+                })
+                .catch(error =>{
+                    console.log("Error:",error);
+                    setmessages("Failed to fetch from database");
+                })
+            },[])
 
     return(
         <div className="pdfs">
             <h1>Revision <span className="dams">Papers</span></h1>
 
             <div className="notes-wrapper">
+                {messages}
                 <p>Revision Papers</p>
-                {PDFS.map((PDF)=>(
-                    <div className="notes-card" key={PDF.number}>
+                {files.map((file)=>(
+                    <div className="notes-card" key={file.id}>
                         <ol>
-                            <li>{PDF.Title}</li>
+                            <li>{file.title1}</li>
                         </ol>
                         <div className="buttons">
-                            <a href="">Download <i className="fas fa-download"></i></a>
-                            <a href="">Read Online <i className="fas fa-server"></i></a>
+                            <a href={`http://localhost/CSHbackend/downloadpdf.php?file=${encodeURIComponent(file.pdf)}`}>
+                            Download <i className="fas fa-download"></i>
+                            </a>
+                            
+                            <a href={`http://localhost/CSHbackend/PDFS/${file.pdf}`} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            >
+                            Read Online <i className="fas fa-server"></i>
+                            </a>
                         </div>
                     </div>
                 ))}

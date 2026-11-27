@@ -56,7 +56,7 @@ function LandingPage (){
     const[open,setopenbox]=useState(false);
 
     const[ message,setmessage] = useState("");
-    const[ dmessage,setdmessage] = useState("");
+   
     const [mynews,setnews]= useState([])
     
     useEffect(()=>{
@@ -110,6 +110,94 @@ function LandingPage (){
 
     },[])
 
+
+     //all members
+    const [members_total ,setmembers_total]=useState([]);
+    useEffect(()=>{
+        fetch("http://localhost/CSHbackend/totalmembers.php",{
+            method:"GET",
+            credentials:"include",
+        })
+        .then(response=>response.json())
+        .then(data=>{
+            if(data.success){
+                setmembers_total(data.content);
+            }
+        })
+
+        .catch(error => {
+            console.log("total error:",error);
+        });
+    },[]);
+
+
+    //allnotes
+
+    const [allnotes,getnotes]=useState([]);
+    
+    useEffect(()=>{
+        fetch("http://localhost/CSHbackend/Allnotes.php",{
+            method:"GET",
+            credentials:"include",
+        })
+        .then(response=>response.json())
+        .then(notesdata=>{
+            if(notesdata.success){
+                getnotes(notesdata.notes_result);
+            }
+            
+        })
+
+        .catch(error => {
+            console.log("total error:",error);
+        });
+    },[]);
+
+
+    //revision papers 
+
+    const [all,getall]=useState([]);
+    
+    useEffect(()=>{
+        fetch("http://localhost/CSHbackend/Revisionpapers.php",{
+            method:"GET",
+            credentials:"include",
+        })
+        .then(response=>response.json())
+        .then(data=>{
+            if(data.success){
+                getall(data.content);
+            }
+            
+        })
+
+        .catch(error => {
+            console.log("total error:",error);
+        });
+    },[]);
+
+    //cats
+
+    const [allcats,getallcats]=useState([]);
+    
+    useEffect(()=>{
+        fetch("http://localhost/CSHbackend/alltests.php",{
+            method:"GET",
+            credentials:"include",
+        })
+        .then(response=>response.json())
+        .then(data=>{
+            if(data.success){
+                getallcats(data.content);
+            }
+            
+        })
+
+        .catch(error => {
+            console.log("total error:",error);
+        });
+    },[]);
+
     const boxes=[
         {number:"1",boxTitle:"Today's Class",boxContent:"Timetable for today goes here"},
         
@@ -129,10 +217,10 @@ function LandingPage (){
     ]
 
     const stats=[
-        {number:"1", limit:total ,name:"Members",i:"fas fa-user-graduate"},
-        {number:"2", limit:"15+" ,name:"Notes",i:"fas fa-graduation-cap"},
-        {number:"3", limit:"17+" ,name:"PDFs",i:"fas fa-layer-group"},
-        {number:"4", limit:"7+" ,name:"Assessments",i:"fa-regular fa-file"}
+        {number:"1", limit:members_total ,name:"Members",i:"fas fa-user-graduate"},
+        {number:"2", limit:allnotes ,name:"Uploaded Notes",i:"fas fa-graduation-cap"},
+        {number:"3", limit:all ,name:"Pastpapers",i:"fas fa-layer-group"},
+        {number:"4", limit:allcats ,name:"CATS",i:"fa-regular fa-file"}
     ]
 
     const chats =[
@@ -199,7 +287,7 @@ function LandingPage (){
                 <br />
                 <div className="welcome-card">
                         
-                    <h2>Hello {User} !</h2>
+                    <h2>Welcome back {User} !</h2>
                     
                     <p>Access all your notes, revision papers, and campus news while staying on track with your timetable and deadlines.</p>
                 </div>
@@ -319,10 +407,13 @@ function LandingPage (){
                 <div className="stats-container">
                     {stats.map((stat)=>(
                         <div className="stats-card"key={stat.number}>
-                            <h2><i className={stat.i}></i></h2>
-                            <div className="label">
+                            <div className="stat-top">
+                                <h2><i className={stat.i}></i></h2>
                                 <small>{stat.name}</small>
-                                <p>{stat.limit}</p>
+                            </div>
+
+                            <div className="label">
+                                <h2>{stat.limit}</h2>
                             </div>
 
                         </div>

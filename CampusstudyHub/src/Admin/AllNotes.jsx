@@ -2,7 +2,10 @@ import {Link} from 'react-router-dom'
 import AdminSidebar from "../AdminSidebar";
 import AdminTop from "../component/AdminTop";
 import NotesComponent from "../component/NotesComponent";
+
 function AllNotes() {
+
+    
     return (
         <div className="admin-dashboard">
             <aside>

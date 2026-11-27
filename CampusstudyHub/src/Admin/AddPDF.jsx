@@ -1,6 +1,38 @@
 import Logo from '../assets/logo.png'
 import Heroimage from "../assets/hero1.png";
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 function AddPDF() {
+
+    const navigate = useNavigate();
+    const [message,setmessage]=useState("");
+
+    function upload(event){
+        event.preventDefault();
+
+        const form =event.target;
+
+        fetch("http://localhost/CSHbackend/Addpdf.php",{
+            method:"POST",
+            credentials:"include",
+            body:new FormData(form),
+        })
+
+        .then(response => response.json())
+        .then(data =>{
+            if(data.success){
+                navigate("/RevisionPDFs");
+            }
+            else{
+                setmessage(data.success);
+            }
+        })
+
+        .catch(error =>{
+            console.log("Error:",error);
+            setmessage("Something went wrong please try again");
+        })
+    }
     return (
         <div className="form-img">
                 <div className="formimage">
@@ -8,7 +40,7 @@ function AddPDF() {
                 </div>
             <div className="login-form">
 
-                <form action="" method='post'>
+                <form onSubmit={upload}>
                     <div className="login-logo">
                         <img src={Logo} alt="login logo" />
                     </div>
@@ -37,7 +69,7 @@ function AddPDF() {
 
                 <div className="input">
              
-                    <select name="year" id="year" required>
+                    <select name="semister" id="year" required>
                     <option>Current Semister</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -48,7 +80,7 @@ function AddPDF() {
 
                     <div className="input">
 
-                        <select name="year" id="year" required>
+                        <select name="course" id="year" required>
                             <option>Select Course</option>
 
                             <option value="Information Technology">Information Technology</option>

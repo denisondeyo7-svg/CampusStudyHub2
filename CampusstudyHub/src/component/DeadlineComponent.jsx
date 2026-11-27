@@ -17,7 +17,7 @@ function DeadlineComponent() {
                 setdeadline(content.data);
             }
             else{
-                setdeadline(content.message);
+                setmessage(content.message);
             }
         })
         .catch(error=>{
@@ -36,17 +36,17 @@ function DeadlineComponent() {
             <div className="notes-wrapper">
                 {message}
 
+                <ol>
                 {deadlines.map((deadline) => (
                     <div className="notes-card" key={deadline.id}>
-                        <ul>
                             <li>{deadline.content}</li>
-                        </ul>
                         <div className="buttons">
                             <a href="">Delete <i className="fas fa-trash"></i></a>
                             <a href="">Edit <i className="fas fa-edit"></i></a>
                         </div>
                     </div>
                 ))}
+                </ol>
             </div>
         </div>
     );

@@ -1,28 +1,46 @@
+import { useState,useEffect } from "react";
 function  RevisionComponent(){
-    const notes = [
-        {number:"1", Title:"Object Oriented Programming 1"},
-        {number:"2", Title:"System Design & Architecture"},
-        {number:"3", Title:"Introduction To Databases"},
-        
-    ]
+    const [files,setfile]=useState([]);
+        const [messages,setmessages]=useState("");
+    
+        useEffect(()=>{
+            fetch("http://localhost/CSHbackend/Pdfs.php",{
+    
+            })
+            .then(response => response.json())
+            .then(results =>{
+                if(results.success){
+                    setfile(results.data);
+                }
+                else{
+                    setmessages(results.message);
+                }
+            })
+            .catch(error =>{
+                console.log("Error:",error);
+                setmessages("Something went wrong");
+            })
+        },[])
+    
     return(
 
          <div className="notes">
             
             
             <div className="notes-wrapper">
+                {messages && <p>{messages}</p> }
+                <ol>
+                {files.map((file)=>(
                 
-                {notes.map((note)=>(
-                    <div className="notes-card" key={note.number}>
-                        <ol>
-                            <li>{note.Title}</li>
-                        </ol>
+                    <div className="notes-card" key={file.id}>
+                            <li>{file.title1}</li>
                         <div className="buttons">
                             <a href="">Delete <i className="fas fa-trash"></i></a>
                             <a href="">Edit <i className="fas fa-edit"></i></a>
                         </div>
                     </div>
                 ))}
+                </ol>
             </div>
         </div>
 
